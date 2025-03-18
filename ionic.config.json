@@ -1,0 +1,7 @@
+{
+  "name": "CapaPay",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
