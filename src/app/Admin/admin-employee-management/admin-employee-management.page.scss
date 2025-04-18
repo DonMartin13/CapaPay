@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 
 ion-content {
@@ -43,53 +44,6 @@ ion-content {
     font-size: 1.5rem;
     color: #F7BC00;
     cursor: pointer;
-}
-
-.kebab-icon {
-    font-size: 1.4rem;
-}
-
-.kebab-invi {
-    font-size: 1.4rem;
-    opacity: 0%;
-}
-
-/* Search Input Field */
-.search-container {
-    padding: 12px;
-}
-
-/* Employee Table */
-.table-container {
-    padding: 15px;
-}
-
-.employee-table {
-    width: 100%;
-    background: white;
-    color: black;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-    padding: 10px;
-}
-
-.employee-table ion-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-}
-
-.employee-table ion-row:last-child {
-    border-bottom: none;
-}
-
-.table-header {
-    font-weight: bold;
-    color: #333;
-    background: #f1f1f1;
-    border-radius: 8px;
-   
 }
 
 

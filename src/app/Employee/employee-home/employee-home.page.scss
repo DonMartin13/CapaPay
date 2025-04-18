@@ -63,24 +63,59 @@ ion-content {
 }
 
 /* Balance Container */
-.balance-container {
-    background: #2B2B2B;
-    text-align: center;
-}
-
-.balance-container h3 {
-    font-size: 1rem;
+/* Center the card wrapper */
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* optional for spacing */
+  }
+  
+  /* Wallet card styling */
+  .balance-container {
+    background-color: #f7bc00;
+    border-radius: 15px;
+    padding: 15px;
     color: white;
-    margin-bottom: 5px;
-}
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Wallet + label */
+  .wallet-text {
+    margin-bottom: 20px;
+  }
+  
+  .wallet-label {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .available-label {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    letter-spacing: 1px;
+  }
+  
+  /* Balance display */
+  .amount-container {
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.balance-container h1 {
-    font-size: 2.5rem;
-    color: #F7BC00;
-    margin-top: 0px;
-}
-
-
+  .balance-amount {
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+  }
+  
+  
+  
 /* Recent Transactions */
 .recent-transactions {
     background: none !important;

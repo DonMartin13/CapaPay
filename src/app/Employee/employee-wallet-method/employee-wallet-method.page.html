@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+
+<body>
+    <ion-app>
+        <ion-content>
+
+              <!-- Header -->
+              <div class="header">
+                <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
+                <div>
+                    <h2>Spending Insights & Budget</h2>
+                    <p></p>
+                </div>
+                <ion-icon name=""></ion-icon>
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="buttons-container" >
+              <div class="custom-button"  (click)="goToInstandSend()">
+                  <ion-icon name="document-text-outline"></ion-icon>
+                  <div>
+                      Employee Transaction Reports
+                      <p class="button-description">Exportable summaries by employee, category (canteen, store), or kiosk location.</p>
+                  </div>
+              </div>
+              
+              <div class="custom-button" (click)="goToQR()" >
+                  <ion-icon name="build-outline"></ion-icon>
+                  <div>
+                      Kiosk Management
+                      <p class="button-description">Register/disable kiosks and assign categories.</p>
+                  </div>
+              </div>
+
+              <div class="custom-button" (click)="goToScanner()">
+                  <ion-icon name="build-outline"></ion-icon>
+                  <div>
+                      Employee Management
+                      <p class="button-description">Approve Employee and See Transaction Report</p>
+                  </div>
+              </div>
+          </div>
+
+    
+
+              
+            
+            
+         
+
+
+        </ion-content>    
+    </ion-app>
+</body>

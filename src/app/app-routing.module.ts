@@ -111,6 +111,30 @@ const routes: Routes = [
     path: 'kiosk-scanner',
     loadChildren: () => import('./Kiosk/kiosk-scanner/kiosk-scanner.module').then( m => m.KioskScannerPageModule)
   },
+  {
+    path: 'admin-employee-management',
+    loadChildren: () => import('./Admin/admin-employee-management/admin-employee-management.module').then( m => m.AdminEmployeeManagementPageModule)
+  },
+  {
+    path: 'admin-credit-details',
+    loadChildren: () => import('./Admin/admin-credit-details/admin-credit-details.module').then( m => m.AdminCreditDetailsPageModule)
+  },
+  {
+    path: 'employee-wallet-method',
+    loadChildren: () => import('./Employee/employee-wallet-method/employee-wallet-method.module').then( m => m.EmployeeWalletMethodPageModule)
+  },
+  {
+    path: 'employee-instant-send',
+    loadChildren: () => import('./Employee/employee-instant-send/employee-instant-send.module').then( m => m.EmployeeInstantSendPageModule)
+  },
+  {
+    path: 'employee-scanner',
+    loadChildren: () => import('./Employee/employee-scanner/employee-scanner.module').then( m => m.EmployeeScannerPageModule)
+  },
+  {
+    path: 'employee-payment-confirmation',
+    loadChildren: () => import('./Employee/employee-payment-confirmation/employee-payment-confirmation.module').then( m => m.EmployeePaymentConfirmationPageModule)
+  },
 ];
 
 @NgModule({

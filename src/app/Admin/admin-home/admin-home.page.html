@@ -18,11 +18,31 @@
             </div>
 
             <!-- Available Balance -->
-            <div class="section-container balance-container">
-                <h3>Available Balance</h3>
-                <h1>₱ 5,000.00</h1>
-            </div>
+            <div class="card-wrapper">
+                <div class="balance-container" (click)="goToCreditDetials()">
+                  <div class="wallet-text">
+                    <h4 class="wallet-label">Wallet</h4>
+                    <span class="available-label">AVAILABLE BALANCE</span>
+                  </div>
+              
+                  <div class="amount-container">
+                    <h1 class="balance-amount">₱ 11,000.00</h1>
+                  </div>
+              
+                  <div class="balance-breakdown">
+                    <div class="breakdown-row">
+                      <span class="breakdown-label">Monthly Allowance</span>
+                      <span class="breakdown-amount">₱ 5000</span>
+                    </div>
+                    <div class="breakdown-row">
+                      <span class="breakdown-label">Savings Account</span>
+                      <span class="breakdown-amount">₱ 6000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              
             <!-- Buttons -->
             <div class="buttons-container" >
                 <div class="custom-button" (click)="goToEmployeeTransactionReport()">
@@ -40,6 +60,14 @@
                         <p class="button-description">Register/disable kiosks and assign categories.</p>
                     </div>
                 </div>
+
+                <div class="custom-button" (click)="goToEmployeeManagement()">
+                    <ion-icon name="build-outline"></ion-icon>
+                    <div>
+                        Employee Management
+                        <p class="button-description">Approve Employee and See Transaction Report</p>
+                    </div>
+                </div>
             </div>
 
           <!-- Recent Transactions -->
@@ -48,7 +76,7 @@
         <ion-list-header>
             <h3>Recent Transactions</h3>
         </ion-list-header>
-        <ion-item class="transaction-item">
+        <ion-item class="transaction-item" >
             <ion-icon name="storefront-outline" slot="start"></ion-icon>
             <ion-label>
                 <h2 class="store-name">ABC Store</h2>
@@ -78,7 +106,7 @@
                 <h2 class="store-name">XYZ Canteen</h2>
                 <p class="transaction-details">Canteen | 2025-03-19</p>
             </ion-label>
-            <div class="transaction-price">- PHP 150</div>
+            <div class="transaction-price" >- PHP 150</div>
         </ion-item>
     </ion-list>
 </div>

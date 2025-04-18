@@ -29,6 +29,11 @@ export class EmployeeNavbarComponent  implements OnInit {
   goToProfile() {
     this.router.navigate(['/employee-profile']);
   }
+  goToWalletMethod() {
+    this.router.navigate(['/employee-wallet-method']);
+  }
 
+
+ 
 
 }

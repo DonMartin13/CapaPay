@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+
+<body>
+  <ion-app>
+    <ion-content>
+      <!-- Header -->
+      <div class="header">
+        <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
+        <h2>Employee Management</h2>
+        <ion-icon name="" size="large"></ion-icon>
+      </div>
+  
+      <!-- Employee Table -->
+      <div class="table-container">
+        <ion-grid>
+          <!-- Table Header -->
+          <ion-row class="table-header">
+            <ion-col size="9"><strong>Employee Name</strong></ion-col>
+            <ion-col size="3" class="text-right"><strong>Actions</strong></ion-col>
+          </ion-row>
+  
+          <!-- Employee Row 1 -->
+          <ion-row class="table-row">
+          
+            <ion-col size="9">Juan Dela Cruz</ion-col>
+            <ion-col size="3" class="text-right icon-actions">
+              <ion-icon name="checkmark-circle-outline" color="success"></ion-icon>
+              <ion-icon name="close-circle-outline" color="danger"></ion-icon>
+            </ion-col>
+
+            <ion-col size="9">Maria Clara</ion-col>
+            <ion-col size="3" class="text-right icon-actions">
+              <ion-icon name="checkmark-circle-outline" color="success"></ion-icon>
+              <ion-icon name="close-circle-outline" color="danger"></ion-icon>
+            </ion-col>
+          </ion-row>
+  
+          
+        </ion-grid>
+      </div>
+    </ion-content>
+  </ion-app>
+  
+</body>
