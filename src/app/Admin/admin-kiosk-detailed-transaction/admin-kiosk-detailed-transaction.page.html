@@ -9,14 +9,13 @@
     <ion-content>
         <!-- Header -->
         <div class="header">
-          <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
+          <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
             <div>
                 <h2>Transaction Report</h2>
-                <p>Employee</p>
+                <p>Alim Mebang</p>
             </div>
             <ion-icon name="download-outline" size="medium"></ion-icon>
         </div>
-
 
         <ion-row class="search-row">
             <!-- Search Bar (90%) -->
@@ -46,25 +45,31 @@
           </ion-row>
           
              <!-- Table Section -->
+  <ion-grid>
 
-         
-<ion-grid>
     <ion-row class="table-header">
-      <ion-col><strong>First Name</strong></ion-col>
-      <ion-col><strong>Last Name</strong></ion-col>
-      <ion-col><strong>Amount Balance</strong></ion-col>
+      <ion-col><strong>Category</strong></ion-col>
+      <ion-col><strong>Total Sales</strong></ion-col>
     </ion-row>
   
-    <ion-row (click)="goToDetailedTransaction()">
-      <ion-col>Don Martin</ion-col>
-      <ion-col>Francisco</ion-col>
-      <ion-col>1500</ion-col>
+    <ion-row>
+      <ion-col>Canteen</ion-col>
+      <ion-col>15000</ion-col>
+    </ion-row>
+
+    <ion-row class="table-header">
+      <ion-col><strong>Date</strong></ion-col>
+      <ion-col><strong>Employee Name</strong></ion-col>
+      <ion-col><strong>Amount</strong></ion-col>
     </ion-row>
   
-  </ion-grid>
+    <ion-row>
+      <ion-col>04/13/25</ion-col>
+      <ion-col>Don Martin Francisco</ion-col>
+      <ion-col>23500</ion-col>
+    </ion-row>
 
-
-        
+  </ion-grid>        
     </ion-content>
 
 </ion-app>

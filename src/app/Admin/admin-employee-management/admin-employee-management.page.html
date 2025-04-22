@@ -4,46 +4,119 @@
 <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
 <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
-
 <body>
   <ion-app>
     <ion-content>
-      <!-- Header -->
-      <div class="header">
-        <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
-        <h2>Employee Management</h2>
-        <ion-icon name="" size="large"></ion-icon>
-      </div>
-  
-      <!-- Employee Table -->
-      <div class="table-container">
-        <ion-grid>
-          <!-- Table Header -->
-          <ion-row class="table-header">
-            <ion-col size="9"><strong>Employee Name</strong></ion-col>
-            <ion-col size="3" class="text-right"><strong>Actions</strong></ion-col>
-          </ion-row>
-  
-          <!-- Employee Row 1 -->
-          <ion-row class="table-row">
-          
-            <ion-col size="9">Juan Dela Cruz</ion-col>
-            <ion-col size="3" class="text-right icon-actions">
-              <ion-icon name="checkmark-circle-outline" color="success"></ion-icon>
-              <ion-icon name="close-circle-outline" color="danger"></ion-icon>
-            </ion-col>
+        <!-- Header -->
+        <div class="header">
+          <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
+            <div>
+                <h2>Account Management</h2>
+                <p></p>
+            </div>
+            <ion-icon name="" size="medium"></ion-icon>
+        </div>
 
-            <ion-col size="9">Maria Clara</ion-col>
-            <ion-col size="3" class="text-right icon-actions">
-              <ion-icon name="checkmark-circle-outline" color="success"></ion-icon>
-              <ion-icon name="close-circle-outline" color="danger"></ion-icon>
+
+        <ion-row class="search-row">
+            <!-- Search Bar (90%) -->
+            <ion-col size="9">
+              <ion-searchbar 
+               
+                (ionInput)="onSearchChange($event)"
+                placeholder="Search...">
+              </ion-searchbar>
+            </ion-col>
+          
+            <!-- Filter Button (10%) -->
+            <ion-col size="3" class="filter-button">
+                <ion-button expand="block" class="custom-filter-btn" id="filter-trigger">
+                    <ion-icon name="filter-outline" slot="icon-only"></ion-icon>
+                  </ion-button>
+          
+              <ion-popover trigger="filter-trigger" triggerAction="click" [dismissOnSelect]="true">
+                <ng-template>
+                  <ion-list>
+                    <ion-item button (click)="onFilterSelect('Employee')">Employee</ion-item>
+                    <ion-item button (click)="onFilterSelect('Kiosk')">Kiosk </ion-item>
+                  </ion-list>
+                </ng-template>
+              </ion-popover>
             </ion-col>
           </ion-row>
-  
           
-        </ion-grid>
-      </div>
+           
+          <!-- Table Section -->
+
+         
+          <ion-grid>
+            <ion-row class="table-header">
+              <ion-col><strong>Employee Name</strong></ion-col>
+            </ion-row>
+        
+            <ion-row class="approval-row">
+              <ion-col class="name-cell">
+                Don Martin Francisco
+              </ion-col>
+           
+              <ion-col class="approval-actions" size="auto">
+                <ion-icon 
+                  name="checkmark-circle-outline" 
+                  color="success" 
+                  size="large" 
+                  (click)="approveUser()">
+                </ion-icon>
+            
+                <ion-icon 
+                  name="close-circle-outline" 
+                  color="danger" 
+                  size="large" 
+                  (click)="rejectUser()">
+                </ion-icon>
+              </ion-col>
+            </ion-row>
+
+
+            <ion-row class="table-header">
+              <ion-col><strong>Kiosk Name</strong></ion-col>
+            </ion-row>
+
+            <ion-row class="approval-row">
+              <ion-col class="name-cell">
+               Aling Kimberly Store
+              </ion-col>
+            
+        
+              <ion-col class="approval-actions" size="auto">
+                <ion-icon 
+                  name="checkmark-circle-outline" 
+                  color="success" 
+                  size="large" 
+                  (click)="approveUser()">
+                </ion-icon>
+            
+                <ion-icon 
+                  name="close-circle-outline" 
+                  color="danger" 
+                  size="large" 
+                  (click)="rejectUser()">
+                </ion-icon>
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+
+
+
+
+               
+
+    
+
+
+        
     </ion-content>
-  </ion-app>
+
+</ion-app>
   
 </body>

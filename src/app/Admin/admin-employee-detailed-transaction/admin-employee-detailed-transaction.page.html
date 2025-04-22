@@ -9,10 +9,10 @@
     <ion-content>
         <!-- Header -->
         <div class="header">
-          <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
+          <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
             <div>
                 <h2>Transaction Report</h2>
-                <p>Employee</p>
+                <p>Don Martin Francisco</p>
             </div>
             <ion-icon name="download-outline" size="medium"></ion-icon>
         </div>
@@ -37,8 +37,8 @@
               <ion-popover trigger="filter-trigger" triggerAction="click" [dismissOnSelect]="true">
                 <ng-template>
                   <ion-list>
-                    <ion-item button (click)="onFilterSelect('Employee')">Employee</ion-item>
-                    <ion-item button (click)="onFilterSelect('Kiosk')">Kiosk </ion-item>
+                    <ion-item button (click)="onFilterSelect('Store')">Store</ion-item>
+                    <ion-item button (click)="onFilterSelect('Canteen')">Canteen </ion-item>
                   </ion-list>
                 </ng-template>
               </ion-popover>
@@ -49,20 +49,35 @@
 
          
 <ion-grid>
-    <ion-row class="table-header">
-      <ion-col><strong>First Name</strong></ion-col>
-      <ion-col><strong>Last Name</strong></ion-col>
-      <ion-col><strong>Amount Balance</strong></ion-col>
-    </ion-row>
-  
-    <ion-row (click)="goToDetailedTransaction()">
-      <ion-col>Don Martin</ion-col>
-      <ion-col>Francisco</ion-col>
-      <ion-col>1500</ion-col>
-    </ion-row>
-  
-  </ion-grid>
 
+    <ion-row class="table-header">
+      <ion-col><strong>Available Balance</strong></ion-col>
+      <ion-col><strong>Total Spent</strong></ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col>13000</ion-col>
+      <ion-col>7000</ion-col>
+    </ion-row>
+
+</ion-grid>
+
+
+<ion-grid>
+  <ion-row class="table-header">
+    <ion-col><strong>Date</strong></ion-col>
+    <ion-col><strong>Kiosk Name</strong></ion-col>
+    <ion-col><strong>Category</strong></ion-col>
+    <ion-col><strong>Amount</strong></ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>04/23/25</ion-col>
+    <ion-col>AlimCanteen</ion-col>
+    <ion-col>Canteen</ion-col>
+    <ion-col>100</ion-col>
+  </ion-row>
+</ion-grid>
 
         
     </ion-content>

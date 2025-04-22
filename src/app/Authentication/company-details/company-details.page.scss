@@ -141,7 +141,9 @@ button:focus {
 
 /* Register Button */
 .register-btn {
-    margin-top: 20px; /* Reduced margin-top */
+    margin-top: 30px; /* Reduced margin-top */
     text-transform: none;
-    font-weight: 300;
+    font-weight: 0px;
+    color: #2B2318;
+    --background: #F7BC00; /* Use Ionic's CSS variable for background */
 }

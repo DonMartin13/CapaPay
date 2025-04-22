@@ -18,5 +18,8 @@ export class RegisterOptionPage implements OnInit {
   goToRegister() {
     this.router.navigate(['/register']);
   }
+  goToKioskRegister() {
+    this.router.navigate(['/kiosk-register']);
+  }
 
 }

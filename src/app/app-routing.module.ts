@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'splash-screen',
     pathMatch: 'full'
   },
   {
@@ -134,6 +134,26 @@ const routes: Routes = [
   {
     path: 'employee-payment-confirmation',
     loadChildren: () => import('./Employee/employee-payment-confirmation/employee-payment-confirmation.module').then( m => m.EmployeePaymentConfirmationPageModule)
+  },
+  {
+    path: 'admin-kiosk-transaction-report',
+    loadChildren: () => import('./Admin/admin-kiosk-transaction-report/admin-kiosk-transaction-report.module').then( m => m.AdminKioskTransactionReportPageModule)
+  },
+  {
+    path: 'admin-employee-detailed-transaction',
+    loadChildren: () => import('./Admin/admin-employee-detailed-transaction/admin-employee-detailed-transaction.module').then( m => m.AdminEmployeeDetailedTransactionPageModule)
+  },
+  {
+    path: 'admin-kiosk-detailed-transaction',
+    loadChildren: () => import('./Admin/admin-kiosk-detailed-transaction/admin-kiosk-detailed-transaction.module').then( m => m.AdminKioskDetailedTransactionPageModule)
+  },
+  {
+    path: 'splash-screen',
+    loadChildren: () => import('./Authentication/splash-screen/splash-screen.module').then( m => m.SplashScreenPageModule)
+  },
+  {
+    path: 'kiosk-register',
+    loadChildren: () => import('./Authentication/kiosk-register/kiosk-register.module').then( m => m.KioskRegisterPageModule)
   },
 ];
 

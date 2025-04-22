@@ -35,11 +35,12 @@ body {
     width: 325px;
     text-align: center;
     margin-top: 25px;
-
 }
+
 .login-container p {
     margin-bottom: 15px;
 }
+
 input {
     width: 100%;
     padding: 10px;
@@ -49,10 +50,12 @@ input {
     background-color: white;
     color: black;
 }
+
 .forgot-password {
     text-align: right;
     font-size: 0.9em;
 }
+
 .continue-btn {
     background: #F7BC00;
     color: rgb(0, 0, 0);
@@ -63,11 +66,33 @@ input {
     width: 100%;
     margin-top: 10px;
 }
+
 .continue-btn:hover {
     background: #0056b3;
 }
+
 .register-link {
     margin-top: 15px;
     font-size: 0.9em;
     color: black;
+}
+
+/* Add the following styles for radio buttons */
+.radio-buttons {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    width: 100%; /* Set width to 50% of the parent container */
+    margin-right: 10px ; /* Center the radio buttons container horizontally */
+}
+
+.radio-buttons input {
+    margin-right: 8px; /* Space between the radio button and the label */
+}
+
+.radio-buttons label {
+    font-size: 1em;
+    color: white;
+    display: flex; /* Ensure the label is inline with the radio button */
+    align-items: center; /* Vertically align the label with the radio button */
+    margin-right: 60px;
 }
