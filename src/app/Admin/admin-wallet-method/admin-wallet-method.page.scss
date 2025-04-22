@@ -50,20 +50,22 @@ ion-content {
 }
 
 /*description lang*/
-.description p {
-   margin-top: 50px;
+.description{
+   margin-top: 25px;
    margin-left: 25px;
    font-weight: 500;
+   color: black;
+   text-align: left;
 }
 
 /* Buttons Container */
 .buttons-container {
     padding: 20px;
-    margin-top: -10px;
+    margin-top: -15px;
     margin-bottom: -10px;
     display: flex;
     flex-direction: column;
-    gap: 8px; /* Increased spacing */
+    gap: 10px; /* Increased spacing */
     align-items: stretch; /* Full width */
 }
 

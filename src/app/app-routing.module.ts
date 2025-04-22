@@ -155,6 +155,18 @@ const routes: Routes = [
     path: 'kiosk-register',
     loadChildren: () => import('./Authentication/kiosk-register/kiosk-register.module').then( m => m.KioskRegisterPageModule)
   },
+  {
+    path: 'admin-wallet-method',
+    loadChildren: () => import('./Admin/admin-wallet-method/admin-wallet-method.module').then( m => m.AdminWalletMethodPageModule)
+  },
+  {
+    path: 'admin-instant-send',
+    loadChildren: () => import('./Admin/admin-instant-send/admin-instant-send.module').then( m => m.AdminInstantSendPageModule)
+  },
+  {
+    path: 'admin-scanner',
+    loadChildren: () => import('./Admin/admin-scanner/admin-scanner.module').then( m => m.AdminScannerPageModule)
+  },
 ];
 
 @NgModule({

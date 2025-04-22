@@ -1,3 +1,4 @@
+
 /* Global Styles */
 * {
    
@@ -12,12 +13,21 @@ ion-content {
     --background: #F7BC00 !important; /* Override dark mode background */
 }
 
+/* Section Containers */
+.section-container {
+    margin: 15px auto;
+    padding: 5px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Header */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8%;
+    height: 7.1%;
     padding: 10px 15px;
     background: #2B2B2B;
 }
@@ -33,6 +43,7 @@ ion-content {
     color: white;
     opacity: 60%;
     margin: 0;
+    text-align: center;
 }
 
 .header ion-icon {
@@ -40,30 +51,19 @@ ion-content {
     color: #F7BC00;
 }
 
-.back-icon {
-    font-size: 1rem;
-    color: #F7BC00;
-    cursor: pointer;
-}
-
-.notif-icon {
-    opacity: 0%;
-}
-
-/* Section Containers: Separate colored divs with padding and spacing */
-.section-container {
-    margin: 15px auto;
-    padding: 15px;
-    width: 90%; /* Keeps sections smaller than full width */
-    border-radius: 10px;
-    background: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
 .qr-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
-  }
+    margin-top: 100px;
+}
+
+.info {
+    color: white;
+    padding-top: 50px;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+}
+
+

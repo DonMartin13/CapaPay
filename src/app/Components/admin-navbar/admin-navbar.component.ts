@@ -34,6 +34,10 @@ export class AdminNavbarComponent  implements OnInit {
   goToProfile() {
     this.router.navigate(['/admin-profile']);
   }
+  goToPaymentMethod() {
+    this.router.navigate(['/admin-wallet-method']);
+  }
+  
 
 
   

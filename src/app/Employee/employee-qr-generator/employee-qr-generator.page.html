@@ -17,13 +17,12 @@
             <ion-icon name="notifications" size="large" class="notif-icon"></ion-icon>
         </div>
 
-        <ion-content class="ion-padding">
-          <div class="qr-container">
+        <div class="qr-container">
             <qrcode [qrdata]="qrData" [width]="300" [errorCorrectionLevel]="'M'"></qrcode>
-          </div>
-        </ion-content>
-
+        </div>
+        <div class="info">
+            <p>Use this to send or pay a user or store with the CapaPay Kiosk.</p>
+        </div>
     </ion-content>
-</ion-app>
-  
+  </ion-app>
 </body>

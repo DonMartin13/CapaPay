@@ -9,22 +9,23 @@
     <ion-content>
         <!-- Header -->
         <div class="header">
-          <ion-icon name="arrow-back-outline" class="back-icon" (click)="goToHome()"></ion-icon>
+          <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
             <div>
-                <h2>QR</h2>
+                <h2>Generate QR</h2>
                 <p></p>
             </div>
-            <ion-icon name="notifications" size="large" class="notif-icon"></ion-icon>
+            <ion-icon name="" size="medium"></ion-icon>
         </div>
-         
-        <ion-content class="ion-padding">
-          <div class="qr-container">
-            <qrcode [qrdata]="qrData" [width]="300" [errorCorrectionLevel]="'M'"></qrcode>
-          </div>
-        </ion-content>
 
-        
+        <div class="qr-container">
+          <qrcode [qrdata]="qrData" [width]="300" [errorCorrectionLevel]="'M'"></qrcode>
+      </div>
+      <div class="info">
+          <p>Use this to Recieve Money from a user</p>
+      </div>
+
     </ion-content>
+
 </ion-app>
   
 </body>

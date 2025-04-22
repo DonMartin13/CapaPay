@@ -1,0 +1,135 @@
+ion-content {
+    --background: #f6f5f8 !important; /* Override dark mode background */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7.1%;
+    padding: 10px 15px;
+    background: #2B2B2B;
+}
+
+.header h2 {
+    font-size: 1rem;
+    color: #F7BC00;
+    margin: 0;
+}
+
+.header p {
+    font-size: 0.7rem;
+    color: white;
+    opacity: 60%;
+    margin: 0;
+}
+
+.header ion-icon {
+    font-size: 1.5rem;
+    color: #F7BC00;
+}
+//
+/* === Transaction Card === */
+.transaction-card {
+    background: #ffffff;
+    margin: 30px 20px;
+    border-radius: 16px;
+    padding: 25px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  /* === Logo Icon === */
+  .logo-placeholder ion-icon {
+    font-size: 48px;
+    color: #F7BC00;
+    margin-bottom: 10px;
+  }
+  
+  /* === Transaction ID === */
+  .transaction-id {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .transaction-id .highlight {
+    color: #F7BC00;
+    font-weight: bold;
+  }
+  
+  /* === Details Block === */
+  .transaction-details .row {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+  }
+  
+  .transaction-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .transaction-details .sub-label {
+    font-size: 0.75rem;
+    color: #888;
+    text-align: left;
+    margin-top: 12px;
+  }
+  
+  .transaction-details .bold-row p {
+    font-weight: bold;
+  }
+  
+  .transaction-details .amount {
+    font-weight: 500;
+  }
+  
+  /* === Disclaimer Text === */
+  .disclaimer {
+    text-align: center;
+    margin: 20px 30px 10px;
+    font-size: 0.75rem;
+    color: #666;
+  }
+  
+  .disclaimer strong {
+    color: #000;
+  }
+  
+  /* === Checkbox Styling === */
+.checkbox-container {
+    margin: 10px 30px;
+    --padding-start: 0;
+    color: #f6f5f8;
+    --background: #f6f5f8; /* This sets the background color */
+    background-color: #f6f5f8; /* Fallback for browsers not using Shadow DOM */
+    --ion-item-background: #f6f5f8; /* Ionic variable for item background */
+  }
+  
+  .checkbox-container ion-label {
+    font-size: 0.85rem;
+    color: #444;
+    margin-left: 15px;
+    
+  }
+  
+  
+  /* === Send Button === */
+  .send-button {
+    text-transform: none;
+    margin-left: 100px;
+    width: 50%;
+    margin-top: 40px; /* Reduced spacing */
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+    --background: #F7BC00;
+    
+  }
+  
+  

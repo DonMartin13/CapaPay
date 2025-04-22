@@ -150,7 +150,7 @@ ion-content {
 /* Category & Date */
 .transaction-details {
     font-size: 0.75rem; /* Smaller text */
-    color: #ffffff;
+    color: #5f5c5c;
     margin-top: 2px;
 }
 
@@ -158,10 +158,86 @@ ion-content {
 .transaction-price {
     font-size: 0.9rem;
     font-weight: bold;
-    color: #ffffff;
+    color: black;
     opacity: 80%;
     min-width: 50px;
     text-align: right;
 }
 
 
+
+
+/* Wrapper to center and set width */
+.join-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  .join-company-form {
+    width: 100%;
+    max-width: 400px;
+    background: transparent;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  /* Input item styling */
+  .custom-input {
+    --background: transparent;
+    --border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  /* Card styling */
+  .company-info-card {
+    border-radius: 12px;
+    background-color: transparent;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+  }
+  
+  /* Card Text */
+  ion-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2B2B2B;
+  }
+  
+  ion-card-subtitle {
+    font-size: 0.85rem;
+    color: #777;
+  }
+  
+  /* Join button */
+  .join-btn {
+    --border-radius: 12px;
+    --background: #F7BC00;
+    --color: #2B2B2B;
+    font-weight: 600;
+  }
+  
+  .join-btn:disabled {
+    opacity: 0.5;
+  }
+  
+  /* Approval text */
+  .approval-text {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    padding-top: 10px;
+  }
+  
+  .join-company-form,
+.join-company-form ion-label,
+.join-company-form ion-input,
+.join-company-form ion-card-title,
+.join-company-form ion-card-subtitle,
+.join-company-form ion-text,
+.join-company-form p {
+  color: #000 !important;
+}
