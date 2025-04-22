@@ -1,13 +1,69 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>employeePaymentConfirmation</ion-title>
-  </ion-toolbar>
-</ion-header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">employeePaymentConfirmation</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<body>
+    <ion-app>
+        <ion-content>
+
+              <!-- Header -->
+              <div class="header">
+                <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
+                <div>
+                    <h2>Instant Send</h2>
+                    <p></p>
+                </div>
+                <ion-icon name=""></ion-icon>
+            </div>
+          
+   
+            <div class="transaction-card">
+              <div class="logo-placeholder">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+              <p class="transaction-id">ID: <span class="highlight">39283984</span></p>
+          
+              <div class="transaction-details">
+                <div class="row">
+                  <p>Balance</p>
+                  <p class="amount">2,300.00</p>
+                </div>
+          
+                <p class="sub-label">You're about to send</p>
+          
+                <div class="row">
+                  <p>Amount</p>
+                  <p class="amount">100.00</p>
+                </div>
+          
+                <hr />
+          
+                <div class="row bold-row">
+                  <p>Total Amount to Pay</p>
+                  <p class="amount">PHP 100</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="disclaimer">
+              <p>
+                Confirmed transactions <strong>will not be refunded.</strong><br />
+                Please make sure that the ID and amount are correct
+              </p>
+            </div>
+          
+            <ion-item lines="none" class="checkbox-container">
+              <ion-checkbox slot="start"></ion-checkbox>
+              <ion-label>I confirm that the details are correct</ion-label>
+            </ion-item>
+          
+            <ion-button expand="block" class="send-button">
+              Send ₱100.00
+            </ion-button>
+
+          </ion-content>    
+        </ion-app>
+    </body>

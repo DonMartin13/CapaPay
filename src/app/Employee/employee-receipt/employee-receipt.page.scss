@@ -140,11 +140,12 @@ ion-content {
 .footer {
     font-size: 0.9rem;
     color: #777;
-    margin-top: 12px;
+    margin-top: 70px;
 }
 
 /* Barcode-like bottom border */
 .receipt-container::after {
+    /* REMOVE THIS BARCODE STYLE */
     content: '';
     display: block;
     width: 80%;
@@ -158,3 +159,17 @@ ion-content {
     );
     margin: 15px auto 0;
 }
+.logo-container {
+    margin-bottom: 1px;
+}
+
+.logo-img {
+    width: 150px; /* Make it bigger */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: px;
+}
+
+
+

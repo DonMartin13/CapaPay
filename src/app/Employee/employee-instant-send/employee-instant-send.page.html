@@ -1,13 +1,45 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>employeeInstantSend</ion-title>
-  </ion-toolbar>
-</ion-header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">employeeInstantSend</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<body>
+    <ion-app>
+        <ion-content>
+
+              <!-- Header -->
+              <div class="header">
+                <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
+                <div>
+                    <h2>Instant Send</h2>
+                    <p></p>
+                </div>
+                <ion-icon name=""></ion-icon>
+            </div>
+
+        <!-- Send Form -->
+        <div class="section-container form-container">
+          <ion-list>
+              <ion-item>
+                  <ion-label position="stacked">Send to</ion-label>
+                  <ion-input type="text" id="employeeName" placeholder="Enter ID number" required></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label position="stacked">Amount</ion-label>
+                  <ion-input type="number" id="setAmount" placeholder="₱ 0.00" required></ion-input>
+                  <p>Available Balance: PHP 2 300</p>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Message</ion-label>
+                <ion-input type="number" id="message" placeholder="(Optional)"></ion-input>
+            </ion-item>
+          </ion-list>
+          <ion-button expand="full" (click)="goToConfirmationPayment()">Next</ion-button>
+          <p id="successMessage" class="success-message" hidden>Transfer completed successfully!</p>
+      </div>
+
+          </ion-content>    
+        </ion-app>
+    </body>

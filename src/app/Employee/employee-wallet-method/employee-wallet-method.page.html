@@ -13,36 +13,41 @@
               <div class="header">
                 <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
                 <div>
-                    <h2>Spending Insights & Budget</h2>
+                    <h2>CapaPay</h2>
                     <p></p>
                 </div>
                 <ion-icon name=""></ion-icon>
             </div>
 
+            <div class="description">
+                <div>
+                <p>Send to any Capapay User or Kiosk</p>
+                </div>
+            </div>
 
             <!-- Buttons -->
             <div class="buttons-container" >
               <div class="custom-button"  (click)="goToInstandSend()">
-                  <ion-icon name="document-text-outline"></ion-icon>
+                  <ion-icon name="cash-outline"></ion-icon>
                   <div>
-                      Employee Transaction Reports
-                      <p class="button-description">Exportable summaries by employee, category (canteen, store), or kiosk location.</p>
+                      Instant Send
+                      <p class="button-description">Manually send money quickly</p>
                   </div>
               </div>
               
               <div class="custom-button" (click)="goToQR()" >
-                  <ion-icon name="build-outline"></ion-icon>
+                  <ion-icon name="qr-code-outline"></ion-icon>
                   <div>
-                      Kiosk Management
-                      <p class="button-description">Register/disable kiosks and assign categories.</p>
+                      Generate QR
+                      <p class="button-description">Instant pay to the CapaPay Kiosk or send money to other users via QR.</p>
                   </div>
               </div>
 
               <div class="custom-button" (click)="goToScanner()">
-                  <ion-icon name="build-outline"></ion-icon>
+                  <ion-icon name="scan-outline"></ion-icon>
                   <div>
-                      Employee Management
-                      <p class="button-description">Approve Employee and See Transaction Report</p>
+                      Scan to Pay
+                      <p class="button-description">Scan QR to send or pay</p>
                   </div>
               </div>
           </div>

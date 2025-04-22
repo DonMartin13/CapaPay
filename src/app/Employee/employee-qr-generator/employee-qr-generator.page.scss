@@ -1,15 +1,20 @@
 /* Global Styles */
 * {
-   
-}
-
-body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;  /* Ensure the body and html take up full height */
+    overflow: hidden !important; /* Disable scrolling on the whole page */
 }
 
 ion-content {
     --background: #F7BC00 !important; /* Override dark mode background */
+    height: 100%; /* Ensure it takes up full height */
+    overflow: hidden !important; /* Disable scrolling inside ion-content */
+    position: absolute; /* Prevent scrolling within ion-content */
 }
 
 /* Header */
@@ -65,5 +70,14 @@ ion-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
-  }
+    margin-top: 100px;
+}
+
+.info {
+    color: white;
+    padding-top: 50px;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+}
+

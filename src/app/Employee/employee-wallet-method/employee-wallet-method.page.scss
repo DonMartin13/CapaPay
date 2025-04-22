@@ -9,7 +9,7 @@ body {
 }
 
 ion-content {
-    --background: #f4f4f4 !important; /* Override dark mode background */
+    --background: #f6f5f8 !important; /* Override dark mode background */
 }
 
 /* Section Containers */
@@ -49,6 +49,13 @@ ion-content {
     color: #F7BC00;
 }
 
+/*description lang*/
+.description p {
+   margin-top: 50px;
+   margin-left: 25px;
+   font-weight: 500;
+}
+
 /* Buttons Container */
 .buttons-container {
     padding: 20px;
@@ -65,8 +72,8 @@ ion-content {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background: #2B2B2B;
-    color: white;
+    background: white;
+    color: black;
     padding: 18px 20px;
     border-radius: 12px;
     font-size: 1rem;
