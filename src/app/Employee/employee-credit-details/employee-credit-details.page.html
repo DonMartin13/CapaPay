@@ -1,0 +1,80 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+
+<body>
+    <ion-app>
+        <ion-content>
+
+              <!-- Header -->
+              <div class="header">
+                <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
+                <div>
+                    <h2>Spending Insights & Budget</h2>
+                    <p></p>
+                </div>
+                <ion-icon name=""></ion-icon>
+            </div>
+
+             <!-- Available Balance -->
+             <div class="card-wrapper">
+                <div class="balance-container">
+                  <div class="wallet-text">
+                    <h4 class="wallet-label">Wallet</h4>
+                    <span class="available-label">AVAILABLE BALANCE</span>
+                  </div>
+              
+                  <div class="amount-container">
+                    <h1 class="balance-amount">₱ 11,000.00</h1>
+                  </div>
+              
+                  <div class="balance-breakdown">
+                    <div class="breakdown-row">
+                      <span class="breakdown-label">Monthly Allowance</span>
+                      <span class="breakdown-amount">₱ 2000</span>
+                    </div>
+                    <div class="breakdown-row">
+                      <span class="breakdown-label">Savings Account</span>
+                      <span class="breakdown-amount">₱ 6000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+                 <!-- Spenf Bar -->
+              <div class="wallet-progress-container">
+                <div class="wallet-header">
+                  <h3>Monthly Allowance</h3>
+                  <span>₱{{ spent  }} / ₱{{ max  }}</span>
+                </div>
+              
+                <div class="progress-bar-background">
+                  <div 
+                    class="progress-bar-fill" 
+                    [style.width.%]="(spent / max) * 100">
+                  </div>
+                </div>
+              
+                <div class="wallet-footer">
+                  <span>{{ ((spent / max) * 100) }}% Spent</span>
+                </div>
+              </div>
+
+              
+
+            
+            
+         
+
+
+        </ion-content>
+
+         
+
+            
+    </ion-app>
+</body>

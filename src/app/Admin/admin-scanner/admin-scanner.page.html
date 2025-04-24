@@ -7,13 +7,19 @@
 
 <body>
     <ion-app>
-        <ion-header>
-            <ion-toolbar>
-                <ion-title>Scanner</ion-title>
-            </ion-toolbar>
-        </ion-header>
-        
         <ion-content>
+        
+          <!-- Header -->
+          <div class="header">
+            <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+              <div>
+                  <h2>Generate QR</h2>
+                  <p></p>
+              </div>
+              <ion-icon name="" size="medium"></ion-icon>
+          </div>
+        
+       
             <div class="scanner-container">
                 <!-- QR Scanner -->
                 <zxing-scanner 

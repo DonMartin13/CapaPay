@@ -19,26 +19,95 @@
                 <ion-icon name=""></ion-icon>
             </div>
 
-        <!-- Send Form -->
-        <div class="section-container form-container">
-          <ion-list>
-              <ion-item>
-                  <ion-label position="stacked">Send to</ion-label>
-                  <ion-input type="text" id="employeeName" placeholder="Enter ID number" required></ion-input>
-              </ion-item>
-              <ion-item>
-                  <ion-label position="stacked">Amount</ion-label>
-                  <ion-input type="number" id="setAmount" placeholder="₱ 0.00" required></ion-input>
-                  <p>Available Balance: PHP 2 300</p>
-              </ion-item>
-              <ion-item>
-                <ion-label position="stacked">Message</ion-label>
-                <ion-input type="number" id="message" placeholder="(Optional)"></ion-input>
-            </ion-item>
-          </ion-list>
-          <ion-button expand="full" (click)="goToConfirmationPayment()">Next</ion-button>
-          <p id="successMessage" class="success-message" hidden>Transfer completed successfully!</p>
-      </div>
+
+           <!-- Transfer From (Opens Bottom Modal) -->
+    <ion-card class="card-section-from" (click)="showTransferFrom = true">
+      <ion-item lines="none">
+        <ion-label>Transfer from</ion-label>
+        <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+      </ion-item>
+    </ion-card>
+
+    <!-- Transfer To (Number Input Only) -->
+    <ion-card class="card-section">
+      <ion-item lines="none">
+        <ion-label position="floating">Transfer to (Account Number)</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+    </ion-card>
+
+     <!-- Transfer Amount (Number Input Only) -->
+     <ion-card class="card-section">
+      <ion-item lines="none">
+        <ion-label position="floating">Transfer Amount</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+    </ion-card>
+    
+
+    <!-- Notes -->
+    <ion-note color="medium" class="note">
+      Remember to check your available balance before sending
+    </ion-note>
+
+    <!-- Optional Note -->
+    <ion-card class="card-section">
+      <ion-item>
+        <ion-textarea placeholder="Add note (optional)"></ion-textarea>
+      </ion-item>
+    </ion-card>
+
+
+    <ion-button expand="full" class="buttons" (click)="goToConfirmationPayment()">Next</ion-button>
+    <p id="successMessage" class="success-message" hidden>Transfer completed successfully!</p>
+
+    <!-- Transfer From Bottom Modal -->
+    <ion-modal
+    [isOpen]="showTransferFrom"
+    (didDismiss)="showTransferFrom = false"
+    handleBehavior="cycle"
+    [breakpoints]="[0, 0.3, 0.5]"
+    initialBreakpoint="0.3"
+  >
+    <ng-template>
+      <ion-content class="modal-content">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Transfer from</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="showTransferFrom = false"><ion-icon name="close-outline"></ion-icon></ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+  
+        <ion-card>
+          <ion-card-content>
+            <div class="account-box">
+              <div>
+                <p class="account-type">SAVINGS ACCOUNT</p>
+                <p class="account-number">13131313</p>
+              </div>
+              <p class="amount">PHP 20,774.09</p>
+            </div>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-content>
+            <div class="account-box">
+              <div>
+                <p class="account-type">MONTHLY ALLOWANCE</p>
+                <p class="account-number">13131313</p>
+              </div>
+              <p class="amount">PHP 3000</p>
+            </div>
+          </ion-card-content>
+        </ion-card>
+        
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+        
 
           </ion-content>    
         </ion-app>

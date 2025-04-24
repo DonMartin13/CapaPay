@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonApp, IonIcon, IonTabButton, IonLabel, IonFooter, IonContent, IonToolbar, IonTabs, IonTabBar, IonButton, IonList, IonListHeader, IonItem, IonFab, IonFabButton, IonHeader, IonTitle, IonInput } from "@ionic/angular/standalone";
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
@@ -11,8 +12,12 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
 })
 export class AdminScannerPage implements OnInit {
 
-  constructor() { }
-
+  constructor(private router: Router ) { }
+ 
+   goBack() {
+     this.router.navigate(['/admin-wallet-method']);
+   }
+   
   ngOnInit() {
   }
 

@@ -103,9 +103,12 @@ ion-content {
     color: #ffffff;
     margin: 16px 0 10px;
     padding-bottom: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Light separator */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light separator */
     transition: background 0.2s ease-in-out;
     padding: 8px;
+    text-align: left;
+    padding-left: 20px;
 }
 
 

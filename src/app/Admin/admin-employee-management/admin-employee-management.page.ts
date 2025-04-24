@@ -17,7 +17,7 @@ export class AdminEmployeeManagementPage implements OnInit {
   }
 
   goBackHome() {
-    this.router.navigate(['/admin-home']);
+    this.router.navigate(['/admin-balance-management']);
   }
 
 

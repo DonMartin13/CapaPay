@@ -10,35 +10,59 @@
           <!-- Header -->
           <div class="header">
             <div>
-                <h2>Balance Management</h2>
+                <h2>Admin Management</h2>
                 <p></p>
             </div>
             <ion-icon name="notifications" (click)="goToNotification()"></ion-icon>
         </div>
 
-         <!-- Available Balance -->
-         <div class="section-container balance-container">
-            <h3>Available Reset</h3>
-            <h1>₱ 5,000.00</h1>
-        </div>
+            <!-- Available Balance -->
+            <div class="card-wrapper">
+                <div class="balance-container" (click)="goToCreditDetials()">
+                  <div class="wallet-text">
+                    <h4 class="wallet-label">Wallet</h4>
+                    <span class="available-label">MONTHLY BALANCE RESET</span>
+                  </div>
+              
+                  <div class="amount-container">
+                    <h1 class="balance-amount">₱ 11,000.00</h1>
+                  </div>
+                </div>
+              </div>
 
-         <!-- Bonus Allowance Form -->
-         <div class="section-container form-container">
-            <h3>Bonus Allowance</h3>
-            <ion-list>
-                <ion-item>
-                    <ion-label position="stacked">Employee Name</ion-label>
-                    <ion-input type="text" id="employeeName"></ion-input>
-                </ion-item>
-                <ion-item>
-                    <ion-label position="stacked">Set Amount</ion-label>
-                    <ion-input type="number" id="setAmount"></ion-input>
-                </ion-item>
-            </ion-list>
-            <ion-button expand="full" onclick="transferBonus()">Transfer</ion-button>
-            <p id="successMessage" class="success-message" hidden>Transfer completed successfully!</p>
-        </div>
+              
+            <!-- Buttons -->
+              <div class= "header-button">
+                System Management
+              </div>
+      
+            <div class="buttons-container" >
+                <div class="custom-button" (click)="goToEmployeeTransactionReport()">
+                    <ion-icon name="document-text-outline"></ion-icon>
+                    <div>
+                        Transaction Reports
+                        <p class="button-description">Exportable summaries by employee, category (canteen, store), or kiosk location.</p>
+                    </div>
+                </div>
+                
+                <div class="custom-button" (click)="goToKioskManagement()">
+                    <ion-icon name="build-outline"></ion-icon>
+                    <div>
+                        Kiosk Management
+                        <p class="button-description">Register/disable kiosks and assign categories.</p>
+                    </div>
+                </div>
 
+                <div class="custom-button" (click)="goToEmployeeManagement()">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <div>
+                        Account Management
+                        <p class="button-description">Approve Employee and Kiosk Account</p>
+                    </div>
+                </div>
+            </div>
+
+        
      
     </ion-content>
 
@@ -49,13 +73,5 @@
 
 </ion-app>
 
-<script>
-    function transferBonus() {
-        document.getElementById("successMessage").hidden = false;
-        setTimeout(() => {
-            document.getElementById("successMessage").hidden = true;
-        }, 3000);
-    }
-  </script>
   
 </body>

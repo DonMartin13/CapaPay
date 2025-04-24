@@ -12,7 +12,7 @@ import { Route, Router } from '@angular/router';
 })
 export class AdminCreditDetailsPage implements OnInit {
 
-  spent = 234;
+  spent = 3000;
   max = 5000;
 
   constructor(private router: Router) { }

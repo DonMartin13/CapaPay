@@ -31,3 +31,160 @@ ion-content {
 }
 
 
+/* GENERAL CARD STYLING */
+ion-card {
+  --background: #ffffff !important;
+  color: black;
+  margin: 16px auto 0;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+ion-card-content {
+  padding: 20px;
+}
+
+/* CARD SECTIONS (INPUT / TEXTAREA) */
+.card-section,
+.card-section-from {
+  margin: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.card-section:hover,
+.card-section-from:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card-section-from {
+  cursor: pointer;
+}
+
+.card-section-from:hover ion-icon {
+  transform: translateX(4px);
+}
+
+/* ION ITEMS */
+ion-item {
+  color: black;
+  --background: transparent !important;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  --highlight-height: 0;
+  --border-color: transparent;
+}
+
+/* LABELS & ICONS */
+ion-label {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+ion-icon {
+  font-size: 1.2rem;
+  color: #999;
+  transition: transform 0.3s ease;
+}
+
+/* INPUT FIELD */
+ion-input {
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  --padding-start: 0;
+  --padding-end: 0;
+  font-size: 1rem;
+  border-bottom: 2px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+ion-input:focus-within {
+  border-bottom: 2px solid #F7BC00;
+}
+
+/* TEXTAREA FIELD */
+ion-textarea {
+  --padding-start: 0;
+  --padding-end: 0;
+  font-size: 1rem;
+  color: #333;
+  border-bottom: 2px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+ion-textarea:focus-within {
+  border-bottom: 2px solid #F7BC00;
+}
+
+/* NOTE TEXT */
+.note {
+  display: block;
+  margin: 16px;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* MODAL */
+.modal-content {
+  --background: #2B2B2B;
+  padding: 16px;
+}
+
+/* MODAL TOOLBAR */
+ion-toolbar {
+  --background: #2B2B2B;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+ion-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #F7BC00;
+}
+
+/* ACCOUNT LIST INSIDE MODAL */
+.account-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.account-type {
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.account-number {
+  color: #888;
+  margin-top: 2px;
+  font-size: 0.85rem;
+}
+
+.amount {
+  font-weight: 600;
+  color: black;
+  margin: 0;
+  white-space: nowrap;
+}
+
+ion-button {
+  text-transform: none;
+  width: 80%;
+  margin-top: 40px; /* Reduced spacing */
+  margin-left: 10%;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: black;
+  --background: #F7BC00;
+  
+}

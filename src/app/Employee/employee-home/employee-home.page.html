@@ -19,87 +19,104 @@
 
             <!-- Available Balance -->
             <div class="card-wrapper">
-                <div class="balance-container">
-                  <div class="wallet-text">
-                    <h4 class="wallet-label">Wallet</h4>
-                    <span class="available-label">AVAILABLE BALANCE</span>
+              <div class="balance-container" (click)="goToCreditDetials()">
+                <div class="wallet-text">
+                  <h4 class="wallet-label">Wallet</h4>
+                  <span class="available-label">AVAILABLE BALANCE</span>
+                </div>
+            
+                <div class="amount-container">
+                  <h1 class="balance-amount">₱ 11,000.00</h1>
+                </div>
+            
+                <div class="balance-breakdown">
+                  <div class="breakdown-row">
+                    <span class="breakdown-label">Monthly Allowance</span>
+                    <span class="breakdown-amount">₱ 5000</span>
                   </div>
-                  <div class="amount-container">
-                    <h1 class="balance-amount">₱ 2,300.00</h1>
+                  <div class="breakdown-row">
+                    <span class="breakdown-label">Savings Account</span>
+                    <span class="breakdown-amount">₱ 6000</span>
                   </div>
                 </div>
               </div>
+            </div>
 
-                   <!-- Join COmpant -->
-              <div class="join-form-wrapper">
-                <form (ngSubmit)="joinCompany()" class="join-company-form">
-                  <ion-item class="custom-input">
-                    <ion-label position="floating">Company Code or Name</ion-label>
-                    <ion-input name="searchInput" required (ionChange)="onSearchChange()"></ion-input>
-                  </ion-item>
-              
-                  <ion-card *ngIf="companyCode && companyName" class="company-info-card">
-                    <ion-card-header>
-                      <ion-card-title>{{ companyName }}</ion-card-title>
-                      <ion-card-subtitle>Code: {{ companyCode }}</ion-card-subtitle>
-                    </ion-card-header>
-                  </ion-card>
-              
-                  <ion-button expand="block" type="submit" [disabled]="!companyCode || !companyName" class="join-btn">
-                    Join
-                  </ion-button>
-                </form>
-              
-                <ion-text *ngIf="isWaitingForApproval" color="medium">
-                  <p class="approval-text">⏳ Wait for approval...</p>
-                </ion-text>
-              </div>
-              
-              
-              
-              
-              
 
-          <!-- Recent Transactions -->
+
+
+  <!--Join Compa y -->
+  <div class="container">
+    <h2>Join Company</h2>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search Company..." />
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>Company Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Eclectus</td>
+          <td>23423432</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="join-button">
+      <button>Join Company</button>
+    </div>
+  </div>
+       
+            
+      
+
+        <!-- Recent Transactions -->
 <div class="section-container recent-transactions">
-    <ion-list>
-        <ion-list-header>
-            <h3>Recent Transactions</h3>
-        </ion-list-header>
-        <ion-item class="transaction-item">
-            <ion-icon name="storefront-outline" slot="start"></ion-icon>
-            <ion-label>
-                <h2 class="store-name">ABC Store</h2>
-                <p class="transaction-details">Store | 2025-03-20</p>
-            </ion-label>
-            <div class="transaction-price">- PHP 200</div>
-        </ion-item>
-        <ion-item class="transaction-item">
-            <ion-icon name="fast-food-outline" slot="start"></ion-icon>
-            <ion-label>
-                <h2 class="store-name">XYZ Canteen</h2>
-                <p class="transaction-details">Canteen | 2025-03-19</p>
-            </ion-label>
-            <div class="transaction-price">- PHP 150</div>
-        </ion-item>
-        <ion-item class="transaction-item">
-            <ion-icon name="storefront-outline" slot="start"></ion-icon>
-            <ion-label>
-                <h2 class="store-name">ABC Store</h2>
-                <p class="transaction-details">Store | 2025-03-20</p>
-            </ion-label>
-            <div class="transaction-price">- PHP 200</div>
-        </ion-item>
-        <ion-item class="transaction-item">
-            <ion-icon name="fast-food-outline" slot="start"></ion-icon>
-            <ion-label>
-                <h2 class="store-name">XYZ Canteen</h2>
-                <p class="transaction-details">Canteen | 2025-03-19</p>
-            </ion-label>
-            <div class="transaction-price">- PHP 150</div>
-        </ion-item>
-    </ion-list>
+  <ion-list>
+      <ion-list-header>
+          <h3>Recent Transactions</h3>
+      </ion-list-header>
+      <ion-item class="transaction-item" >
+          <ion-icon name="storefront-outline" slot="start"></ion-icon>
+          <ion-label>
+              <h2 class="store-name">ABC Store</h2>
+              <p class="transaction-details">Store | 2025-03-20</p>
+          </ion-label>
+          <div class="transaction-price">- PHP 200</div>
+      </ion-item>
+      <ion-item class="transaction-item">
+          <ion-icon name="fast-food-outline" slot="start"></ion-icon>
+          <ion-label>
+              <h2 class="store-name">XYZ Canteen</h2>
+              <p class="transaction-details">Canteen | 2025-03-19</p>
+          </ion-label>
+          <div class="transaction-price">- PHP 150</div>
+      </ion-item>
+      <ion-item class="transaction-item">
+          <ion-icon name="storefront-outline" slot="start"></ion-icon>
+          <ion-label>
+              <h2 class="store-name">ABC Store</h2>
+              <p class="transaction-details">Store | 2025-03-20</p>
+          </ion-label>
+          <div class="transaction-price">- PHP 200</div>
+      </ion-item>
+      <ion-item class="transaction-item">
+          <ion-icon name="fast-food-outline" slot="start"></ion-icon>
+          <ion-label>
+              <h2 class="store-name">XYZ Canteen</h2>
+              <p class="transaction-details">Canteen | 2025-03-19</p>
+          </ion-label>
+          <div class="transaction-price" >- PHP 150</div>
+      </ion-item>
+  </ion-list>
 </div>
+
         </ion-content>
 
         <!-- Employee Navigation -->

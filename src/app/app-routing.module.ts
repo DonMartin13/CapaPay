@@ -167,6 +167,10 @@ const routes: Routes = [
     path: 'admin-scanner',
     loadChildren: () => import('./Admin/admin-scanner/admin-scanner.module').then( m => m.AdminScannerPageModule)
   },
+  {
+    path: 'employee-credit-details',
+    loadChildren: () => import('./Employee/employee-credit-details/employee-credit-details.module').then( m => m.EmployeeCreditDetailsPageModule)
+  },
 ];
 
 @NgModule({

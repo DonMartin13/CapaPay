@@ -15,8 +15,8 @@ export class EmployeeQrGeneratorPage implements OnInit {
 
   constructor(private navCtrl: NavController, private router: Router ) { }
 
-  goToHome() {
-    this.router.navigate(['/employee-home']);
+  goBack() {
+    this.router.navigate(['/employee-wallet-method']);
   }
 
   qrData: string = 'Initial QR Data';
