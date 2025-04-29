@@ -171,6 +171,22 @@ const routes: Routes = [
     path: 'employee-credit-details',
     loadChildren: () => import('./Employee/employee-credit-details/employee-credit-details.module').then( m => m.EmployeeCreditDetailsPageModule)
   },
+  {
+    path: 'forgot-password',
+    loadChildren: () => import('./Authentication/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },
+  {
+    path: 'verification-password',
+    loadChildren: () => import('./Authentication/verification-password/verification-password.module').then( m => m.VerificationPasswordPageModule)
+  },
+  {
+    path: 'set-new-password',
+    loadChildren: () => import('./Authentication/set-new-password/set-new-password.module').then( m => m.SetNewPasswordPageModule)
+  },
+  {
+    path: 'confirmation',
+    loadChildren: () => import('./Authentication/confirmation/confirmation.module').then( m => m.ConfirmationPageModule)
+  },
 ];
 
 @NgModule({
