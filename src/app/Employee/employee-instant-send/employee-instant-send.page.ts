@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonApp, IonIcon, IonTabButton, IonLabel, IonFooter, IonContent, IonToolbar, IonTabs, IonTabBar, IonButton, IonList, IonListHeader, IonItem, IonFab, IonFabButton, IonHeader, IonTitle, IonInput, IonCardContent, IonCard, IonButtons, IonModal, IonTextarea, IonNote } from "@ionic/angular/standalone";
+import { InstantSendComponent } from '../../Components/instant-send/instant-send.component';
 
 @Component({
   selector: 'app-employee-instant-send',
   templateUrl: './employee-instant-send.page.html',
   styleUrls: ['./employee-instant-send.page.scss'],
-  imports: [IonNote, IonTextarea, IonModal, IonButtons, IonCard, IonCardContent, IonTitle, IonHeader, IonFabButton, IonFab, IonItem, IonListHeader, IonList, IonButton, IonApp, IonIcon, IonTabButton, IonLabel, IonFooter, IonContent, IonToolbar, IonTabs, IonTabBar, IonInput] 
+  imports: [InstantSendComponent,IonNote, IonTextarea, IonModal, IonButtons, IonCard, IonCardContent, IonTitle, IonHeader, IonFabButton, IonFab, IonItem, IonListHeader, IonList, IonButton, IonApp, IonIcon, IonTabButton, IonLabel, IonFooter, IonContent, IonToolbar, IonTabs, IonTabBar, IonInput] 
 
 })
 export class EmployeeInstantSendPage implements OnInit {

@@ -14,53 +14,11 @@
                 <h2>Transaction History</h2>
                 <p></p>
             </div>
-            <ion-icon name="filter-outline"></ion-icon>
+            <ion-icon id="filter-trigger" name="filter-outline" slot="end" style="cursor: pointer;"></ion-icon>
         </div>
-
-       <!-- Recent Transactions -->
-<div class="section-container recent-transactions">
-    <ion-list>
-       
-        <!-- Transactions for March 20, 2025 -->
-        <div class="transaction-date">March 20, 2025</div>
-        <ion-item class="transaction-item">
-            <ion-icon name="storefront-outline" slot="start"></ion-icon>
-            <ion-label>
-                <h2 class="store-name">ABC Store</h2>
-                <p class="transaction-details">Store</p>
-            </ion-label>
-            <div class="transaction-price">- PHP 200</div>
-        </ion-item>
-        <ion-item class="transaction-item">
-            <ion-icon name="storefront-outline" slot="start"></ion-icon>
-            <ion-label>
-                <h2 class="store-name">ABC Store</h2>
-                <p class="transaction-details">Store</p>
-            </ion-label>
-            <div class="transaction-price">- PHP 200</div>
-        </ion-item>
-
-        <!-- Transactions for March 19, 2025 -->
-        <div class="transaction-date">March 19, 2025</div>
-        <ion-item class="transaction-item">
-            <ion-icon name="fast-food-outline" slot="start"></ion-icon>
-            <ion-label>
-                <h2 class="store-name">XYZ Canteen</h2>
-                <p class="transaction-details">Canteen</p>
-            </ion-label>
-            <div class="transaction-price">- PHP 150</div>
-        </ion-item>
-        <ion-item class="transaction-item">
-            <ion-icon name="fast-food-outline" slot="start"></ion-icon>
-            <ion-label>
-                <h2 class="store-name">XYZ Canteen</h2>
-                <p class="transaction-details">Canteen</p>
-            </ion-label>
-            <div class="transaction-price">- PHP 150</div>
-        </ion-item>
-    </ion-list>
-</div>
-
+        
+        <!-- Employee Navigation -->
+      <app-transaction-history></app-transaction-history>
 
       
     </ion-content>

@@ -3,13 +3,15 @@ import { IonApp, IonIcon, IonTabButton, IonLabel, IonFooter, IonContent, IonTool
 
 import { EmployeeNavbarComponent } from '../../Components/employee-navbar/employee-navbar.component';
 import { Router } from '@angular/router';
+import { BalanceContainerComponent } from '../../Components/balance-container/balance-container.component';
+
 
 
 @Component({
   selector: 'app-employee-home',
   templateUrl: './employee-home.page.html',
   styleUrls: ['./employee-home.page.scss'],
-  imports: [IonGrid, IonCol, IonRow, IonInput, IonCardHeader, IonCard, IonText, IonCardTitle, IonCardSubtitle, EmployeeNavbarComponent, IonTitle, IonHeader, IonFabButton, IonFab, IonItem, IonListHeader, IonList, IonButton, IonApp, IonIcon, IonTabButton, IonLabel, IonFooter, IonContent, IonToolbar, IonTabs, IonTabBar] 
+  imports: [BalanceContainerComponent,IonGrid, IonCol, IonRow, IonInput, IonCardHeader, IonCard, IonText, IonCardTitle, IonCardSubtitle, EmployeeNavbarComponent, IonTitle, IonHeader, IonFabButton, IonFab, IonItem, IonListHeader, IonList, IonButton, IonApp, IonIcon, IonTabButton, IonLabel, IonFooter, IonContent, IonToolbar, IonTabs, IonTabBar] 
 })
 export class EmployeeHomePage implements OnInit {
 

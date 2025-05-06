@@ -69,30 +69,21 @@
               <ion-col class="name-cell">
                 Active
               </ion-col>
-              <ion-icon class="kebab" name="ellipsis-vertical-outline" size=""></ion-icon>
+              <ion-icon  id="filter-trigger-kebab" class="kebab" name="ellipsis-vertical-outline" size=""></ion-icon>
           
+              <ion-popover trigger="filter-trigger-kebab" triggerAction="click" [dismissOnSelect]="true">
+                <ng-template>
+                  <ion-list>
+                    <ion-item button (click)="onFilterSelect('Activate')">Activate</ion-item>
+                    <ion-item button (click)="onFilterSelect('Disable')">Disable </ion-item>
+                  </ion-list>
+                </ng-template>
+              </ion-popover>
+
             </ion-row>
 
-            <ion-row class="approval-row">
-              <ion-col class="name-cell">
-               Aling Kim
-              </ion-col>
-              <ion-col class="name-cell">
-                Store
-              </ion-col>
-              <ion-col class="name-cell">
-                Disabled
-              </ion-col>
-              <ion-icon class="kebab" name="ellipsis-vertical-outline" size=""></ion-icon>
+          
 
-            
-            
-        
-            </ion-row>
-
-
-
-  
 
           </ion-grid>
 

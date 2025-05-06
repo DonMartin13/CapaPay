@@ -187,6 +187,10 @@ const routes: Routes = [
     path: 'confirmation',
     loadChildren: () => import('./Authentication/confirmation/confirmation.module').then( m => m.ConfirmationPageModule)
   },
+  {
+    path: 'admin-payment-confirmation',
+    loadChildren: () => import('./Admin/admin-payment-confirmation/admin-payment-confirmation.module').then( m => m.AdminPaymentConfirmationPageModule)
+  },
 ];
 
 @NgModule({

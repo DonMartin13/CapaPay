@@ -1,0 +1,120 @@
+/* Section Containers: Separate colored divs with padding and spacing */
+.section-container {
+    margin: 15px auto;
+    padding: 15px;
+    width: 90%; /* Keeps sections smaller than full width */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Receipt */
+.receipt-container {
+    background: white;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    position: relative;
+    max-width: 350px;
+    overflow: hidden;
+}
+
+/* Receipt edge effect */
+.receipt-container::before, .receipt-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    left: 0;
+}
+.receipt-container::before {
+    top: -6px;
+}
+.receipt-container::after {
+    bottom: -6px;
+}
+
+/* Store Icon */
+.store-icon {
+    font-size: 48px;
+    color: #F7BC00;
+}
+
+/* Store Name */
+.store-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #222;
+}
+
+/* Transaction Status */
+.transaction-info {
+    font-size: 1rem;
+    color: #555;
+    margin: 8px 0;
+}
+
+/* Amount */
+.amount {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #2B2B2B;
+    margin: 20px 0;
+}
+
+/* Dotted Divider */
+.divider {
+    width: 80%;
+    border-bottom: 2px dashed #ccc;
+    margin: 15px auto;
+}
+
+/* Transaction Details Layout */
+.transaction-detail {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 6px auto;
+    font-size: 1rem;
+    color: #555;
+    font-size: 0.8rem;
+}
+
+/* Footer */
+.footer {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 70px;
+}
+
+/* Barcode-like bottom border */
+.receipt-container::after {
+    /* REMOVE THIS BARCODE STYLE */
+    content: '';
+    display: block;
+    width: 80%;
+    height: 4px;
+    background: repeating-linear-gradient(
+        90deg,
+        black,
+        black 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    margin: 15px auto 0;
+}
+.logo-container {
+    margin-bottom: 1px;
+}
+
+.logo-img {
+    width: 150px; /* Make it bigger */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: px;
+}

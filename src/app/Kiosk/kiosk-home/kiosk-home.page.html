@@ -17,12 +17,31 @@
                 <ion-icon name="notifications"></ion-icon>
             </div>
 
-            <!-- Available Balance -->
-            <div class="section-container balance-container">
-                <h3>Available Balance</h3>
-                <h1>₱ 5,000.00</h1>
+         <!-- Available Balance -->
+         <div class="card-wrapper">
+            <div class="balance-container" (click)="goToCreditDetials()">
+              <div class="wallet-text">
+                <h4 class="wallet-label">Wallet</h4>
+                <span class="available-label">AVAILABLE BALANCE</span>
+              </div>
+          
+              <div class="amount-container">
+                <h1 class="balance-amount">₱ 11,000.00</h1>
+              </div>
+          
+              <div class="balance-breakdown">
+                <div class="breakdown-row">
+                  <span class="breakdown-label">Monthly Allowance</span>
+                  <span class="breakdown-amount">₱ 5000</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">Savings Account</span>
+                  <span class="breakdown-amount">₱ 6000</span>
+                </div>
+              </div>
             </div>
-
+          </div>
+          
           <!-- Recent Transactions -->
 <div class="section-container recent-transactions">
     <ion-list>

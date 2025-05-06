@@ -38,7 +38,6 @@ ion-content {
 .header ion-icon {
     font-size: 1.5rem;
     color: #F7BC00;
-    opacity: 0%;
 }
 
 /* Section Containers: Separate colored divs with padding and spacing */
@@ -51,53 +50,6 @@ ion-content {
 }
 
 
-/* Notifications */
-.notifications-container {
-    padding: 16px;
-    background-color: #f9f9f9; //BG COLOR
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-/* Notification Wrapper */
-.notification-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-/* Custom Radio Button Styling */
-.notification-wrapper ion-radio {
-    flex-shrink: 0;
-    --color: #F7BC00; /* Ensure radio button is visible */
-    --border-width: 2px;
-    --size: 20px; /* Adjust size */
-}
-
-/* Notification Item */
-.notification-item {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    background: #fff;
-    padding: 12px 16px;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
-.notification-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Notification Message */
-.notification-message {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.4;
-}
 
 
 

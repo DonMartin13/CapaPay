@@ -18,64 +18,10 @@
             </div>
 
             <!-- Available Balance -->
-            <div class="card-wrapper">
-              <div class="balance-container" (click)="goToCreditDetials()">
-                <div class="wallet-text">
-                  <h4 class="wallet-label">Wallet</h4>
-                  <span class="available-label">AVAILABLE BALANCE</span>
-                </div>
-            
-                <div class="amount-container">
-                  <h1 class="balance-amount">₱ 11,000.00</h1>
-                </div>
-            
-                <div class="balance-breakdown">
-                  <div class="breakdown-row">
-                    <span class="breakdown-label">Monthly Allowance</span>
-                    <span class="breakdown-amount">₱ 5000</span>
-                  </div>
-                  <div class="breakdown-row">
-                    <span class="breakdown-label">Savings Account</span>
-                    <span class="breakdown-amount">₱ 6000</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+           
+            <app-balance-container></app-balance-container>
 
-
-
-
-  <!--Join Compa y -->
-  <div class="container">
-    <h2>Join Company</h2>
-
-    <div class="search-bar">
-      <input type="text" placeholder="Search Company..." />
-    </div>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Company Name</th>
-          <th>Company Code</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Eclectus</td>
-          <td>23423432</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="join-button">
-      <button>Join Company</button>
-    </div>
-  </div>
-       
-            
-      
-
+                  
         <!-- Recent Transactions -->
 <div class="section-container recent-transactions">
   <ion-list>

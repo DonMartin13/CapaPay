@@ -16,4 +16,7 @@ export class KioskHomePage implements OnInit {
   ngOnInit() {
   }
 
+  goToCreditDetials(){
+  }
+
 }

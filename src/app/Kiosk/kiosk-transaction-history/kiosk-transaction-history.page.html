@@ -16,38 +16,12 @@
                 <h2>Transaction History</h2>
                 <p></p>
             </div>
-            <ion-icon name="notifications"></ion-icon>
+            <ion-icon id="filter-trigger" name="filter-outline" slot="end" style="cursor: pointer;"></ion-icon>
         </div>
 
-        <!-- Transaction History -->
-        <div class="section-container transactions-container">
-            <h3></h3>
-            
-            <div class="transaction-date">March 19, 2025</div>
-            <div class="transaction-item">
-                <div class="transaction-info">
-                    <h4>Don Martin</h4>
-                    <p>Company</p>
-                </div>
-                <p class="transaction-price"> ₱ 150</p>
-            </div>
-            <div class="transaction-item">
-                <div class="transaction-info">
-                    <h4>Don Martin</h4>
-                    <p>Company</p>
-                </div>
-                <p class="transaction-price"> ₱ 300</p>
-            </div>
-
-            <div class="transaction-date">March 18, 2025</div>
-            <div class="transaction-item">
-                <div class="transaction-info">
-                    <h4>Don Martin</h4>
-                    <p>Company</p>
-                </div>
-                <p class="transaction-price"> ₱ 200</p>
-            </div>
-        </div>
+        <!-- Employee Navigation -->
+      <app-transaction-history></app-transaction-history>
+       
 
       
     </ion-content>

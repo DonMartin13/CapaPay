@@ -9,7 +9,7 @@
     <ion-content>
         <!-- Header -->
         <div class="header">
-          <ion-icon name="arrow-back-outline" class="back-icon"></ion-icon>
+          <ion-icon (click)="goToHome()" name="arrow-back-outline" class="back-icon"></ion-icon>
             <div>
                 <h2>Receipt</h2>
                 <p></p>
@@ -19,34 +19,8 @@
 
 
         <!-- Receipt -->
-<div class="receipt-container">
-  <ion-icon name="storefront-outline" class="store-icon"></ion-icon>
-  <div class="store-name">ABC Canteen</div>
-  <p class="transaction-info">Successfully Paid</p>
-  <div class="divider"></div>
-  <p class="amount">₱150.00</p>
 
-  <div class="transaction-detail">
-      <span>Transaction #</span>
-      <span>1234567890</span>
-  </div>
-
-  <div class="transaction-detail">
-      <span>Date</span>
-      <span>March 20, 2025</span>
-  </div>
-
-  <div class="transaction-detail">
-    <span>Time</span>
-    <span>10:30 AM</span>
-</div>
-
-  <div class="divider"></div>
-  <p class="footer">Thank you for your payment!</p>
-</div>
-
-
-
+        <app-receipt></app-receipt>
 
     </ion-content>
 

@@ -1,0 +1,46 @@
+     <!-- Popover -->
+     <ion-popover trigger="filter-trigger" triggerAction="click" [dismissOnSelect]="true">
+      <ng-template>
+        <ion-list>
+          <ion-item button (click)="onFilterSelect('All')">All</ion-item>
+          <ion-item button (click)="onFilterSelect('Sent')">Sent</ion-item>
+          <ion-item button (click)="onFilterSelect('Recieved')">Recieved</ion-item>
+        </ion-list>
+      </ng-template>
+    </ion-popover>
+  
+     <!-- Notifications List -->
+  <div class="notifications-container">
+      <div class="notification-wrapper">
+          <ion-radio slot="start"></ion-radio>
+          <div class="notification-item">
+              <div class="notification-message">
+                  <p>You sent PHP 300 to Aling Kimberly on March 13, 2025, at 3:24 PM.</p>
+              </div>
+          </div>
+      </div>
+      <div class="notification-wrapper">
+          <ion-radio slot="start"></ion-radio>
+          <div class="notification-item">
+              <div class="notification-message">
+                  <p>You sent PHP 300 to Aling Kimberly on March 13, 2025, at 3:24 PM.</p>
+              </div>
+          </div>
+      </div>
+      <div class="notification-wrapper">
+          <ion-radio slot="start"></ion-radio>
+          <div class="notification-item">
+              <div class="notification-message">
+                  <p>You sent PHP 300 to Aling Kimberly on March 13, 2025, at 3:24 PM.</p>
+              </div>
+          </div>
+      </div>
+      <div class="notification-wrapper">
+          <ion-radio slot="start"></ion-radio>
+          <div class="notification-item">
+              <div class="notification-message">
+                  <p>You sent PHP 300 to Aling Kimberly on March 13, 2025, at 3:24 PM.</p>
+              </div>
+          </div>
+      </div>
+  </div>

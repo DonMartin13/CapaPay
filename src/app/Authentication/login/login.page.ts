@@ -18,4 +18,8 @@ export class LoginPage implements OnInit {
     this.router.navigate(['/register-option']);
   }
 
+  goToForgotPassword() {
+    this.router.navigate(['/forgot-password']);
+  }
+
 }

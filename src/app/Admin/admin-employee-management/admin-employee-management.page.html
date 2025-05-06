@@ -37,6 +37,7 @@
               <ion-popover trigger="filter-trigger" triggerAction="click" [dismissOnSelect]="true">
                 <ng-template>
                   <ion-list>
+                    <ion-item button (click)="onFilterSelect('All')">All</ion-item>
                     <ion-item button (click)="onFilterSelect('Employee')">Employee</ion-item>
                     <ion-item button (click)="onFilterSelect('Kiosk')">Kiosk </ion-item>
                   </ion-list>

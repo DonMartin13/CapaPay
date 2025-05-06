@@ -38,7 +38,6 @@ ion-content {
 .header ion-icon {
     font-size: 1.5rem;
     color: #F7BC00;
-    opacity: 0%;
 }
 
 /* Section Containers: Separate colored divs with padding and spacing */
@@ -49,66 +48,5 @@ ion-content {
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-/* Transaction Area */
-.transactions-container {
-    background-color: #2B2B2B;
-    color: #333;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-    margin-top: 15px auto;
-}
-
-/* Date Separator */
-.transaction-date {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #ffffff;
-    margin: 16px 0 10px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid #EAEAEA;
-}
-
-/* Transaction Item */
-.transaction-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 12px;
-    border-radius: 8px;
-    background: #2B2B2B;
-    margin: 6px 0;
-    transition: background 0.2s ease-in-out;
-}
-
-/* Hover Effect for Interaction */
-.transaction-item:hover {
-    background: #F7F7F7;
-}
-
-/* Transaction Info */
-.transaction-info h4 {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-.transaction-info p {
-    margin: 0;
-    font-size: 0.85rem;
-    color: #888;
-}
-
-/* Transaction Price */
-.transaction-price {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #F7BC00;
-}
-
-
-
 
 
