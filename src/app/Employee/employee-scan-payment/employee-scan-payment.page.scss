@@ -1,0 +1,47 @@
+ion-content {
+    --background: #f6f5f8 !important; /* Override dark mode background */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7.1%;
+    padding: 10px 15px;
+    background: #2B2B2B;
+}
+
+.header h2 {
+    font-size: 1rem;
+    color: #F7BC00;
+    margin: 0;
+}
+
+.header p {
+    font-size: 0.7rem;
+    color: white;
+    opacity: 60%;
+    margin: 0;
+}
+
+.header ion-icon {
+    font-size: 1.5rem;
+    color: #F7BC00;
+}
+
+ion-button {
+    text-transform: none;
+    width: 80%;
+    margin-top: 40px; /* Reduced spacing */
+    margin-left: 10%;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+    --background: #F7BC00;
+    
+  }
+
+

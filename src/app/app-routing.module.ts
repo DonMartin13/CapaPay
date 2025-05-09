@@ -191,6 +191,14 @@ const routes: Routes = [
     path: 'admin-payment-confirmation',
     loadChildren: () => import('./Admin/admin-payment-confirmation/admin-payment-confirmation.module').then( m => m.AdminPaymentConfirmationPageModule)
   },
+  {
+    path: 'admin-scan-payment',
+    loadChildren: () => import('./Admin/admin-scan-payment/admin-scan-payment.module').then( m => m.AdminScanPaymentPageModule)
+  },
+  {
+    path: 'employee-scan-payment',
+    loadChildren: () => import('./Employee/employee-scan-payment/employee-scan-payment.module').then( m => m.EmployeeScanPaymentPageModule)
+  },
 ];
 
 @NgModule({

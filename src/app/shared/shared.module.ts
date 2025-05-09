@@ -11,6 +11,7 @@ import { ProfileComponent } from '../Components/profile/profile.component';
 import { BalanceContainerComponent } from '../Components/balance-container/balance-container.component';
 import { ReceiptComponent } from '../Components/receipt/receipt.component';
 import { PaymentConfirmationComponent } from '../Components/payment-confirmation/payment-confirmation.component';
+import { ScanPaymentComponent } from '../Components/scan-payment/scan-payment.component';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { PaymentConfirmationComponent } from '../Components/payment-confirmation
     BalanceContainerComponent,
     ReceiptComponent,
     PaymentConfirmationComponent,
+    ScanPaymentComponent,
   ],  // Import here
   exports: [
     EmployeeNavbarComponent,
@@ -40,6 +42,7 @@ import { PaymentConfirmationComponent } from '../Components/payment-confirmation
     BalanceContainerComponent,
     ReceiptComponent,
     PaymentConfirmationComponent,
+    ScanPaymentComponent,
   ],  // Export it for reuse
 })
 export class SharedModule {}
