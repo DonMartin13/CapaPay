@@ -1,0 +1,73 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+
+<body>
+  <ion-app>
+    <ion-content>
+      
+      <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
+      <!-- Header -->
+      <app-status-bar></app-status-bar>
+      <div class="header">
+        <div *ngIf="user">
+          <h2>Hi {{ user.firstName }} {{ user.lastName }}!</h2>
+          <p>{{ user.email }}</p>
+        </div>
+
+        <ion-icon *ngIf="user?.role === 'admin'" name="notifications" (click)="goToNotification()"></ion-icon>
+      </div>
+
+      <!-- Join Company Prompt -->
+      <app-join-company *ngIf="user && !user.companyId"></app-join-company>
+
+      <!-- Show Balance and Transactions Only If User Has Company -->
+      <ng-container *ngIf="user && user.companyId">
+
+        <!-- Available Balance -->
+        <div class="section-container balance-container" *ngIf="balance !== null">
+          <h3>Available Balance</h3>
+          <h1>₱ {{ balance | number:'1.2-2' }}</h1>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="section-container recent-transactions" *ngIf="recentTransactions && recentTransactions.length">
+          <ion-list>
+            <ion-list-header>
+              <h3>Recent Transactions</h3>
+            </ion-list-header>
+
+            <ion-item class="transaction-item" *ngFor="let tx of recentTransactions">
+              <ion-icon [name]="tx.icon || 'card-outline'" slot="start"></ion-icon>
+              <ion-label>
+                <h2 class="store-name">{{ tx.firstName }} {{ tx.lastName }}</h2>
+                <p class="transaction-details">{{ tx.firstName }} | {{ tx.createdDate | date }}</p>
+              </ion-label>
+              <div class="transaction-price">
+                <div [ngClass]="tx.type === 'credit' ? 'text-success' : 'text-danger'">
+                  {{ tx.type === 'credit' ? '+' : '-' }} PHP {{ tx.amount }}
+                </div>
+              </div>
+            </ion-item>
+          </ion-list>
+        </div>
+
+      </ng-container>
+    
+    </ion-content>
+
+    <!-- Employee Navigation -->
+    <ng-container [ngSwitch]="user?.role">
+      <app-admin-navbar *ngSwitchCase="'admin'"></app-admin-navbar>
+      <app-employee-navbar *ngSwitchCase="'employee'"></app-employee-navbar>
+      <app-employee-navbar *ngSwitchCase="'kiosk'"></app-employee-navbar>
+      <!-- Add more navbars here -->
+    </ng-container>
+  </ion-app>
+</body>

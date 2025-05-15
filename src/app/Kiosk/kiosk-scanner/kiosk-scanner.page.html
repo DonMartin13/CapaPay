@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>Scanner</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        
+        <ion-content>
+            <div class="scanner-container">
+                <!-- QR Scanner -->
+                <zxing-scanner 
+                    (scanSuccess)="onScanSuccess($event)">
+                </zxing-scanner>
+            
+                <ion-item class="input-item">
+                    <ion-label>Price</ion-label>
+                    <ion-input type="number" (ionChange)="onPriceChange($event)" placeholder="Enter price"></ion-input>
+                </ion-item>
+            </div>
+        </ion-content>
+
+           <!-- Employee Navigation -->
+      <app-kiosk-navbar></app-kiosk-navbar>
+    </ion-app>
+</body>
+

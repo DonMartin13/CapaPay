@@ -1,0 +1,74 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+
+<body>
+    <ion-app>
+        <ion-content>
+            <!-- Header -->
+            <div class="header">
+                <div>
+                    <h2>Kimberly Store</h2>
+                    <p>kimberlykainingmail.com</p>
+                </div>
+                <ion-icon name="notifications"></ion-icon>
+            </div>
+
+            <!-- Available Balance -->
+            <div class="section-container balance-container">
+                <h3>Available Balance</h3>
+                <h1>₱ 5,000.00</h1>
+            </div>
+
+          <!-- Recent Transactions -->
+<div class="section-container recent-transactions">
+    <ion-list>
+        <ion-list-header>
+            <h3>Recent Transactions</h3>
+        </ion-list-header>
+        <ion-item class="transaction-item">
+            <ion-icon name="storefront-outline" slot="start"></ion-icon>
+            <ion-label>
+                <h2 class="store-name">Don Martin Francisco</h2>
+                <p class="transaction-details">2025-03-20</p>
+            </ion-label>
+            <div class="transaction-price">PHP 200</div>
+        </ion-item>
+        <ion-item class="transaction-item">
+            <ion-icon name="fast-food-outline" slot="start"></ion-icon>
+            <ion-label>
+                <h2 class="store-name">Don Martin Francisco</h2>
+                <p class="transaction-details">2025-03-19</p>
+            </ion-label>
+            <div class="transaction-price">PHP 150</div>
+        </ion-item>
+        <ion-item class="transaction-item">
+            <ion-icon name="storefront-outline" slot="start"></ion-icon>
+            <ion-label>
+                <h2 class="store-name">Don Martin Francisco</h2>
+                <p class="transaction-details">2025-03-20</p>
+            </ion-label>
+            <div class="transaction-price">PHP 200</div>
+        </ion-item>
+        <ion-item class="transaction-item">
+            <ion-icon name="fast-food-outline" slot="start"></ion-icon>
+            <ion-label>
+                <h2 class="store-name">Don Martin Francisco</h2>
+                <p class="transaction-details">2025-03-19</p>
+            </ion-label>
+            <div class="transaction-price">PHP 150</div>
+        </ion-item>
+    </ion-list>
+</div>
+
+        </ion-content>
+
+         <!-- Employee Navigation -->
+         <app-kiosk-navbar></app-kiosk-navbar>
+
+
+    </ion-app>
+</body>

@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+
+<body>
+    <ion-app>
+      <ion-content >
+           <!-- Header -->
+           <div class="header">
+            <div>
+                <h2>Account Profile</h2>
+                <p></p>
+            </div>
+        </div>
+
+
+        <!-- Profile Container -->
+  <div class="profile-container">
+    <!-- Background with slanting colors -->
+    <div class="profile-background">
+      <img src="../../../assets/icon/profile.jpg" alt="User Avatar" class="avatar" />
+    </div>
+    
+    <!-- Profile Details -->
+    <div class="profile-details">
+      <!-- Name -->
+      <h2 class="name">Don Martin Francisco</h2>
+      
+      <!-- Profile Information -->
+      <div class="profile-item">
+        <span class="label">Email:</span>
+        <span class="value">donmartingmail.com</span>
+      </div>
+      
+      <div class="profile-item">
+        <span class="label">User ID:</span>
+        <span class="value">13131313</span>
+      </div>
+      
+      <div class="profile-item">
+        <span class="label">Company Name:</span>
+        <span class="value">Eclectus</span>
+      </div>
+      
+      <div class="profile-item">
+        <span class="label">Nature of Business:</span>
+        <span class="value">Retail</span>
+      </div>
+    
+    </div>
+    <!-- Logout Button -->
+    <ion-button color="danger" class="logout-btn">Log Out</ion-button>
+  </div>
+
+
+      
+      </ion-content>
+
+        <!-- Employee Navigation -->
+        <app-kiosk-navbar></app-kiosk-navbar>
+     
+    </ion-app>
+</body>

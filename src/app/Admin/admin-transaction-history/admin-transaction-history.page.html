@@ -1,0 +1,75 @@
+<p>
+  admin-transaction-history works!
+</p>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+<body>
+  <ion-app>
+    <ion-content>
+          <!-- Header -->
+           <app-status-bar></app-status-bar>
+          <div class="header">
+            <div>
+                <h2>Transaction History</h2>
+                <p></p>
+            </div>
+            <ion-icon name="notifications" (click)="goToNotification()"></ion-icon>
+        </div>
+
+
+<!-- Recent Transactions -->
+<div class="section-container recent-transactions">
+    <ion-list *ngIf="groupedTransactions.length > 0">
+        <ng-container *ngFor="let group of groupedTransactions">
+          <div class="transaction-date">
+            {{ group.date | date: 'fullDate' }}
+          </div>
+          <ng-container *ngFor="let transaction of group.transactions">
+            <ion-item 
+            class="transaction-item"
+            button
+            (click)="goToReceipt(transaction)">
+            <ion-icon 
+              [name]="transaction.category === 'Canteen' ? 'fast-food-outline' : 'storefront-outline'" 
+              slot="start">
+            </ion-icon>
+            <ion-label>
+              <h2 class="store-name">{{ transaction.firstName }}</h2>
+              <p class="transaction-details">{{ transaction.lastName }}</p>
+            </ion-label>
+            <div class="transaction-price" [class.credit]="transaction.type === 'credit'">
+              {{ transaction.type === 'credit' ? '+' : '-' }} PHP {{ transaction.amount | number: '1.2-2' }}
+            </div>
+          </ion-item>          
+          </ng-container>
+        </ng-container>
+      </ion-list>      
+  
+      <div *ngIf="groupedTransactions.length === 0" class="empty-state">
+        <ion-icon name="document-text-outline" style="font-size: 48px; color: #ccc;"></ion-icon>
+        <p style="margin-top: 12px; color: #666; font-size: 16px;">No transactions found yet.</p>
+      </div>      
+  </div>
+  
+
+
+
+    </ion-content>
+
+      <!-- Employee Navigation -->
+      <ng-container [ngSwitch]="user?.role">
+        <app-admin-navbar *ngSwitchCase="'admin'"></app-admin-navbar>
+        <app-employee-navbar *ngSwitchCase="'employee'"></app-employee-navbar>
+        <app-employee-navbar *ngSwitchCase="'kiosk'"></app-employee-navbar>
+        <!-- Add more navbars here -->
+      </ng-container>
+
+
+
+
+</ion-app>
+</body>

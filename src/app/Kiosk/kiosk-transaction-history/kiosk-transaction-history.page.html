@@ -1,0 +1,62 @@
+<p>
+  admin-transaction-history works!
+</p>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+<body>
+  <ion-app>
+    <ion-content>
+         <!-- Header -->
+         <div class="header">
+            <div>
+                <h2>Transaction History</h2>
+                <p></p>
+            </div>
+            <ion-icon name="notifications"></ion-icon>
+        </div>
+
+        <!-- Transaction History -->
+        <div class="section-container transactions-container">
+            <h3></h3>
+            
+            <div class="transaction-date">March 19, 2025</div>
+            <div class="transaction-item">
+                <div class="transaction-info">
+                    <h4>Don Martin</h4>
+                    <p>Company</p>
+                </div>
+                <p class="transaction-price"> ₱ 150</p>
+            </div>
+            <div class="transaction-item">
+                <div class="transaction-info">
+                    <h4>Don Martin</h4>
+                    <p>Company</p>
+                </div>
+                <p class="transaction-price"> ₱ 300</p>
+            </div>
+
+            <div class="transaction-date">March 18, 2025</div>
+            <div class="transaction-item">
+                <div class="transaction-info">
+                    <h4>Don Martin</h4>
+                    <p>Company</p>
+                </div>
+                <p class="transaction-price"> ₱ 200</p>
+            </div>
+        </div>
+
+      
+    </ion-content>
+
+    <!-- Employee Navigation -->
+    <app-kiosk-navbar></app-kiosk-navbar>
+
+
+ 
+
+</ion-app>
+</body>

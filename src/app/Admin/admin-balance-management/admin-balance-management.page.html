@@ -1,0 +1,94 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+<body>
+  <ion-app>
+    <ion-content>
+          <!-- Header -->
+           <app-status-bar></app-status-bar>
+          <div class="header">
+            <div>
+                <h2>Admin Management</h2>
+                <p></p>
+            </div>
+            <ion-icon name="notifications" (click)="goToNotification()"></ion-icon>
+        </div>
+
+    <!-- Editable Initial Balance -->
+    <div class="custom-card">
+      <div class="balance-header">
+        <h4>Initial Balance</h4>
+        <ion-icon name="pencil-outline" (click)="toggleEditBalance()"></ion-icon>
+      </div>
+
+      <div *ngIf="isEditingBalance; else viewMode">
+        <ion-input
+          type="number"
+          [(ngModel)]="initialBalance"
+          placeholder="Enter initial balance"
+          min="0">
+        </ion-input>
+      </div>
+
+      <ng-template #viewMode>
+        <p>₱ {{ initialBalance }}</p>
+      </ng-template>
+
+      
+    </div>
+    <div class="buttons-container" >
+      <div class="custom-button" (click)="confirmCreateCompanyWallet()">
+        <ion-icon name="wallet-outline"></ion-icon>
+        <div>
+          Create Wallets
+          <p class="button-description">Automatically create wallets for all company users who don't have one.</p>
+        </div>
+      </div>
+    </div>         
+            <!-- Buttons -->
+              <div class= "header-button">
+                System Management
+              </div>
+      
+            <div class="buttons-container" >
+                <div class="custom-button" (click)="goToEmployeeTransactionReport()">
+                    <ion-icon name="document-text-outline"></ion-icon>
+                    <div>
+                        Transaction Reports
+                        <p class="button-description">Exportable summaries by employee, category (canteen, store), or kiosk location.</p>
+                    </div>
+                </div>
+                
+                <div class="custom-button" (click)="goToKioskManagement()">
+                    <ion-icon name="build-outline"></ion-icon>
+                    <div>
+                        Kiosk Management
+                        <p class="button-description">Register/disable kiosks and assign categories.</p>
+                    </div>
+                </div>
+
+                <div class="custom-button" (click)="goToEmployeeManagement()">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <div>
+                        Account Management
+                        <p class="button-description">Approve Employee and Kiosk Account</p>
+                    </div>
+                </div>
+            </div>
+
+        
+     
+    </ion-content>
+
+    <!-- Employee Navigation -->
+    <app-admin-navbar></app-admin-navbar>
+
+
+
+</ion-app>
+
+  
+</body>

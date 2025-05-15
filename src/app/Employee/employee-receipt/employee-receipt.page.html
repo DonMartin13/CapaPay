@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+<body>
+  <ion-app>
+    <ion-content>
+        <!-- Header -->
+        <div class="header">
+          <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+            <div>
+                <h2>Receipt</h2>
+                <p></p>
+            </div>
+            <ion-icon name="notifications" size="large" class="notif-icon"></ion-icon>
+        </div>
+
+
+        <!-- Receipt -->
+        <div class="receipt-container" *ngIf="transaction">
+          <ion-icon name="storefront-outline" class="store-icon"></ion-icon>
+          <div class="store-name">{{ transaction.kioskName }}</div>
+          <p class="transaction-info">Successfully Paid</p>
+          <div class="divider"></div>
+          <p class="amount">₱{{ transaction.amount | number:'1.2-2' }}</p>
+    
+          <div class="transaction-detail">
+            <span>Transaction #</span>
+            <span>{{ transaction.id }}</span>
+          </div>
+    
+          <div class="transaction-detail">
+            <span>Date</span>
+            <span>{{ transaction.createdDate | date:'longDate' }}</span>
+          </div>
+    
+          <div class="transaction-detail">
+            <span>Time</span>
+            <span>{{ transaction.createdDate | date:'shortTime' }}</span>
+          </div>
+    
+          <div class="divider"></div>
+          <p class="footer">Thank you for your payment!</p>
+        </div>
+
+
+
+
+    </ion-content>
+
+
+</ion-app>
+  
+</body>

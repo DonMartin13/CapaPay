@@ -1,0 +1,98 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Registration</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css" />
+  </head>
+  
+  <body>
+    <div class="logo-container">
+      <img src="../../../assets/logo/vertical.png" alt="Logo Placeholder" class="logo-img" />
+    </div>
+  
+    <div class="section-container">
+      <h2>Please enter your kiosk details.</h2>
+  
+      
+      <ion-item class="inputKiosk">
+        <ion-input
+          type="text"
+          placeholder="Kiosk Name"
+          [(ngModel)]="kioskName"
+          name="kioskName"
+          required>
+        </ion-input>
+      </ion-item>
+  
+      <!-- Nature of Business Buttons -->
+  <h3>Kiosk Category</h3>
+
+  <div class="business-buttons">
+    <ion-button
+      expand="full"
+      fill="outline"
+      class="business-btn"
+      [color]="kioskCategory === 'Canteen' ? 'primary' : 'medium'"
+      (click)="kioskCategory = 'Canteen'">
+      Canteen
+    </ion-button>
+
+    <ion-button
+      expand="full"
+      fill="outline"
+      class="business-btn"
+      [color]="kioskCategory === 'Bookstore' ? 'primary' : 'medium'"
+      (click)="kioskCategory = 'Bookstore'">
+      Bookstore
+    </ion-button>
+
+    <ion-button
+      expand="full"
+      fill="outline"
+      class="business-btn"
+      [color]="kioskCategory === 'Convenience Store' ? 'primary' : 'medium'"
+      (click)="kioskCategory = 'Convenience Store'">
+      Convenience Store
+    </ion-button>
+
+    <ion-button
+      expand="full"
+      fill="outline"
+      class="business-btn"
+      [color]="kioskCategory === 'School Supplies' ? 'primary' : 'medium'"
+      (click)="kioskCategory = 'School Supplies'">
+      School Supplies
+    </ion-button>
+
+    <ion-button
+      expand="full"
+      fill="outline"
+      class="business-btn"
+      [color]="kioskCategory === 'Others' ? 'primary' : 'medium'"
+      (click)="kioskCategory = 'Others'">
+      Others
+    </ion-button>
+  </div>
+
+  <ion-item *ngIf="kioskCategory === 'Others'">
+  <ion-input
+    type="text"
+    placeholder="Please specify your kiosk category"
+    [(ngModel)]="customCategory"
+    name="customCategory"
+    required>
+  </ion-input>
+</ion-item>
+  
+      <ion-button
+        expand="full"
+        color="primary"
+        class="register-btn"
+        (click)="registerKiosk()">
+        Register Kiosk
+      </ion-button>
+    </div>
+  </body>
+  

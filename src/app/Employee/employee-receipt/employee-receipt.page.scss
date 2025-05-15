@@ -1,0 +1,160 @@
+/* Global Styles */
+* {
+   
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ion-content {
+    --background: #F7BC00 !important; /* Override dark mode background */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8%;
+    padding: 10px 15px;
+    background: #2B2B2B;
+}
+
+.header h2 {
+    font-size: 1rem;
+    color: #F7BC00;
+    margin: 0;
+}
+
+.header p {
+    font-size: 0.7rem;
+    color: white;
+    opacity: 60%;
+    margin: 0;
+}
+
+.header ion-icon {
+    font-size: 1.5rem;
+    color: #F7BC00;
+}
+
+.back-icon {
+    font-size: 1rem;
+    color: #F7BC00;
+    cursor: pointer;
+}
+
+.notif-icon {
+    opacity: 0%;
+}
+
+/* Section Containers: Separate colored divs with padding and spacing */
+.section-container {
+    margin: 15px auto;
+    padding: 15px;
+    width: 90%; /* Keeps sections smaller than full width */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Receipt */
+.receipt-container {
+    background: white;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    position: relative;
+    max-width: 350px;
+    overflow: hidden;
+}
+
+/* Receipt edge effect */
+.receipt-container::before, .receipt-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    left: 0;
+}
+.receipt-container::before {
+    top: -6px;
+}
+.receipt-container::after {
+    bottom: -6px;
+}
+
+/* Store Icon */
+.store-icon {
+    font-size: 48px;
+    color: #F7BC00;
+}
+
+/* Store Name */
+.store-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #222;
+}
+
+/* Transaction Status */
+.transaction-info {
+    font-size: 1rem;
+    color: #555;
+    margin: 8px 0;
+}
+
+/* Amount */
+.amount {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #2B2B2B;
+    margin: 20px 0;
+}
+
+/* Dotted Divider */
+.divider {
+    width: 80%;
+    border-bottom: 2px dashed #ccc;
+    margin: 15px auto;
+}
+
+/* Transaction Details Layout */
+.transaction-detail {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 6px auto;
+    font-size: 1rem;
+    color: #555;
+    font-size: 0.8rem;
+}
+
+/* Footer */
+.footer {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 12px;
+}
+
+/* Barcode-like bottom border */
+.receipt-container::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 4px;
+    background: repeating-linear-gradient(
+        90deg,
+        black,
+        black 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    margin: 15px auto 0;
+}

@@ -1,0 +1,127 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+.logo-container {
+    margin-bottom: 1px;
+}
+
+.logo-img {
+    width: 150px; /* Make it bigger */
+    height: auto;
+    display: block;
+}
+
+ion-content {
+    --background: #ffffff !important; /* Override dark mode background */
+}
+
+h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+ion-item.inputCompany {
+    --background: white;
+    color: black;
+    margin: 8px 0; /* Reduced margin */
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+ion-label {
+    color: black;
+    --background: white;
+   
+}
+
+ion-input {
+  
+    --background: white;
+    --color: black;
+    z-index: -1;
+}
+
+
+
+/* Section Containers */
+.section-container {
+    margin: 30px auto;
+    padding: 20px;
+    width: 85%;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #2B2318;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.section-container:hover {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons */
+button {
+    --background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px 0;
+    display: block;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #d3d5d6;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Nature of Business Button Styles */
+.business-btn {
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+    --border-color: white;
+}
+
+.business-btn:hover {
+    background-color: #F7BC00;
+    color: black;
+}
+
+/* Register Button Styles */
+.register-btn {
+    margin-top: 25px;
+    width: 100%;
+    --background: #F7BC00 !important;
+    --color: black;
+}

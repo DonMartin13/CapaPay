@@ -1,0 +1,61 @@
+
+/* Global Styles */
+* {
+   
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ion-content {
+    --background: #F7BC00 !important; /* Override dark mode background */
+}
+
+/* Section Containers */
+.section-container {
+    margin: 15px auto;
+    padding: 5px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7.1%;
+    padding: 10px 15px;
+    background: #2B2B2B;
+}
+
+.header h2 {
+    font-size: 1rem;
+    color: #F7BC00;
+    margin: 0;
+}
+
+.header p {
+    font-size: 0.7rem;
+    color: white;
+    opacity: 60%;
+    margin: 0;
+    text-align: center;
+}
+
+.header ion-icon {
+    font-size: 1.5rem;
+    color: #F7BC00;
+}
+
+
+.scanner-container {
+    margin-top: 20px;
+    height: 300px;
+    border: 2px solid #3880ff;
+    border-radius: 8px;
+    overflow: hidden;
+  }

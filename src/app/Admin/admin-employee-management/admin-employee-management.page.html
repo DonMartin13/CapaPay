@@ -1,0 +1,146 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+<body>
+  <ion-app>
+    <ion-content>
+        <!-- Header -->
+         <app-status-bar></app-status-bar>
+        <div class="header">
+          <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
+            <div>
+                <h2>Account Management</h2>
+            </div>
+        </div>
+
+        <!-- Search & Filter -->
+        <ion-row class="search-row">
+            <ion-col size="9">
+              <ion-searchbar 
+                (ionInput)="onSearchChange($event)"
+                placeholder="Search...">
+              </ion-searchbar>
+            </ion-col>
+            <ion-col size="3" class="filter-button">
+                <ion-button expand="block" class="custom-filter-btn" id="filter-trigger">
+                    <ion-icon name="filter-outline" slot="icon-only"></ion-icon>
+                </ion-button>
+                <ion-popover trigger="filter-trigger" triggerAction="click" [dismissOnSelect]="true">
+                  <ng-template>
+                    <ion-list>
+                      <ion-item button (click)="onFilterSelect('Employee')">Employee</ion-item>
+                      <ion-item button (click)="onFilterSelect('Kiosk')">Kiosk </ion-item>
+                    </ion-list>
+                  </ng-template>
+                </ion-popover>
+            </ion-col>
+        </ion-row>
+
+        <!-- Table Section -->
+        <ion-grid>
+
+          <!-- Employee Section -->
+          <ion-row class="table-header">
+            <ion-col><strong>Employee Name</strong></ion-col>
+            <ion-col size="auto"><strong>Action</strong></ion-col>
+          </ion-row>
+
+          <ion-row class="approval-row" *ngFor="let employee of employeeRequests">
+            <ion-col class="name-cell">
+              {{ employee.firstName }} {{ employee.lastName }}
+            </ion-col>
+            <ion-col class="approval-actions" size="auto">
+              <!-- Pending: Show both -->
+              <ng-container *ngIf="employee.status === 'pending'">
+                <ion-icon 
+                  name="checkmark-circle-outline" 
+                  color="success" 
+                  size="large" 
+                  (click)="confirmAction('approve', employee.userId)">
+                </ion-icon>
+                <ion-icon 
+                  name="close-circle-outline" 
+                  color="danger" 
+                  size="large" 
+                  (click)="confirmAction('reject', employee.userId)">
+                </ion-icon>
+              </ng-container>
+
+              
+              <ng-container *ngIf="employee.status === 'approved'">
+                <ion-icon 
+                  name="close-circle-outline" 
+                  color="danger" 
+                  size="large" 
+                  (click)="confirmAction('reject', employee.userId)">
+                </ion-icon>
+              </ng-container>
+
+              
+              <ng-container *ngIf="employee.status === 'rejected'">
+                <ion-icon 
+                  name="checkmark-circle-outline" 
+                  color="success" 
+                  size="large" 
+                  (click)="confirmAction('approve', employee.userId)">
+                </ion-icon>
+              </ng-container>
+            </ion-col>
+          </ion-row>
+
+          
+          <ion-row class="table-header">
+            <ion-col><strong>Kiosk Name</strong></ion-col>
+            <ion-col size="auto"><strong>Action</strong></ion-col>
+          </ion-row>
+
+          <ion-row class="approval-row" *ngFor="let kiosk of kioskRequests">
+            <ion-col class="name-cell">
+              {{ kiosk.firstName }} {{ kiosk.lastName }}
+            </ion-col>
+            <ion-col class="approval-actions" size="auto">
+              <!-- Pending: Show both -->
+              <ng-container *ngIf="kiosk.status === 'pending'">
+                <ion-icon 
+                  name="checkmark-circle-outline" 
+                  color="success" 
+                  size="large" 
+                  (click)="confirmAction('approve', kiosk.userId)">
+                </ion-icon>
+                <ion-icon 
+                  name="close-circle-outline" 
+                  color="danger" 
+                  size="large" 
+                  (click)="confirmAction('reject', kiosk.userId)">
+                </ion-icon>
+              </ng-container>
+
+              
+              <ng-container *ngIf="kiosk.status === 'approved'">
+                <ion-icon 
+                  name="close-circle-outline" 
+                  color="danger" 
+                  size="large" 
+                  (click)="confirmAction('reject', kiosk.userId)">
+                </ion-icon>
+              </ng-container>
+
+              
+              <ng-container *ngIf="kiosk.status === 'rejected'">
+                <ion-icon 
+                  name="checkmark-circle-outline" 
+                  color="success" 
+                  size="large" 
+                  (click)="confirmAction('approve', kiosk.userId)">
+                </ion-icon>
+              </ng-container>
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+    </ion-content>
+  </ion-app>
+</body>

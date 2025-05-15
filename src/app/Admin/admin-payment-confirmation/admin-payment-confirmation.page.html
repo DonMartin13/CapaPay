@@ -1,0 +1,65 @@
+<ion-app>
+  <ion-content>
+    <!-- Header -->
+     <app-status-bar></app-status-bar>
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
+      <div>
+        <h2>Instant Send</h2>
+        <p></p>
+      </div>
+      <ion-icon name=""></ion-icon>
+    </div>
+
+    <!-- Payment Confirmation -->
+    <div class="transaction-card">
+      <div class="logo-placeholder">
+        <ion-icon name="checkmark-circle"></ion-icon>
+      </div>
+
+      <ng-container *ngIf="userInfo" class="user-info">
+        <p>Recipient: <strong>{{ userInfo.firstName }} {{ userInfo.lastName }}</strong></p>
+        <p>User Number: <strong>{{ userNumber }}</strong></p>
+      </ng-container>
+
+      <div class="transaction-details">
+        <div class="row">
+          <p>Balance</p>
+          <p class="amount">₱ {{ balance | number:'1.2-2' }}</p>
+        </div>
+
+        <p class="sub-label">You're about to send</p>
+
+        <div class="row">
+          <p>Amount</p>
+          <p class="amount">₱{{ amount }}</p>
+        </div>
+
+        <hr />
+
+        <div class="row bold-row">
+          <p>Total Amount to Pay</p>
+          <p class="amount">₱{{ amount }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <p>
+        Confirmed transactions <strong>will not be refunded.</strong><br />
+        Please make sure that the ID and amount are correct.
+      </p>
+    </div>
+
+    <ion-item lines="none" class="checkbox-container">
+      <ion-checkbox slot="start" [(ngModel)]="isDisclaimerChecked"></ion-checkbox>
+      <ion-label>I confirm that the details are correct</ion-label>
+    </ion-item>
+
+    <ion-button expand="block" class="send-button"
+                [disabled]="!isDisclaimerChecked"
+                (click)="sendMoneyToUser()">
+      Send ₱{{ amount }}
+    </ion-button>
+  </ion-content>
+</ion-app>

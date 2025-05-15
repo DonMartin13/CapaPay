@@ -1,0 +1,27 @@
+   <!-- Floating QR Generator Button Above Navigation -->
+   <div class="fab-container">
+    <ion-fab class="fab-button" (click)="goToPaymentMethod()">
+        <ion-fab-button>
+            <ion-icon name="grid-outline"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</div>
+
+<!-- Bottom Navigation Panel -->
+<ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" (click)="goToHome()" >
+        <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="transactions" (click)="goToTransactionHistory()">
+        <ion-icon name="list"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="qr">
+      
+    </ion-tab-button>
+    <ion-tab-button tab="notification" (click)="goToNotification()">
+        <ion-icon name="notifications"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="profile" (click)="goToProfile()">
+        <ion-icon name="person"></ion-icon>
+    </ion-tab-button>
+</ion-tab-bar>

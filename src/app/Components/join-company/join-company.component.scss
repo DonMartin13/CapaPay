@@ -1,0 +1,47 @@
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: 2rem auto;
+    background: #2B2B2B;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+  
+  ion-card-title {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  ion-item.search-bar {
+    --background: transparent;
+    background: transparent;
+    border-radius: 8px;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-bar ion-input {
+    background: white;
+    border-radius: 8px;
+    padding-right: 20px;
+    font-size: 1rem;
+    color: #000;
+
+  }
+  
+  .join-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  ion-button {
+    --border-radius: 8px;
+    --padding-start: 1.5rem;
+    --padding-end: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  

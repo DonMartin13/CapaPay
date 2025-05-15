@@ -1,0 +1,202 @@
+
+/* Global Styles */
+* {
+   
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ion-content {
+    --background: #f4f4f4 !important; /* Override dark mode background */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8%;
+    padding: 10px 15px;
+    background: #2B2B2B;
+}
+
+.header h2 {
+    font-size: 1rem;
+    color: #F7BC00;
+    margin: 0;
+}
+
+.header p {
+    font-size: 0.7rem;
+    color: white;
+    opacity: 60%;
+    margin: 0;
+}
+
+.header ion-icon {
+    font-size: 1.5rem;
+    color: #F7BC00;
+}
+
+/* Buttons Container */
+.buttons-container {
+    padding: 20px;
+    margin-top: -15px;
+    margin-bottom: -10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Increased spacing */
+    align-items: stretch; /* Full width */
+}
+
+/* Custom Buttons */
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #2B2B2B;
+    color: white;
+    padding: 18px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button ion-icon {
+    font-size: 2.2rem;
+    margin-right: 15px;
+    color: #F7BC00;
+    flex-shrink: 0;
+}
+
+.custom-button .button-content {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto; /* Pushes content away from icon */
+}
+
+.custom-button p {
+    font-size: .7rem;
+    font-weight: normal !important;
+    margin: 0;
+}
+
+.button-description {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: 3px;
+}
+
+/* Section Containers */
+.section-container {
+    margin: 15px auto;
+    padding: 5px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Balance Container */
+/* Center the card wrapper */
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* optional for spacing */
+  }
+  
+  /* Wallet card styling */
+  .balance-container {
+    background-color: #2B2B2B;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Wallet + label */
+  .wallet-text {
+    margin-bottom: 25px;
+  }
+  
+  .wallet-label {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #F7BC00;
+  }
+  
+  .available-label {
+    font-size: 0.70rem;
+    opacity: 0.8;
+    letter-spacing: 1px;
+  }
+  
+  /* Balance display */
+  .amount-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .balance-amount {
+    font-size: 2.8rem;
+    font-weight: 1000;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  /* Breakdown section under balance */
+.balance-breakdown {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 5px;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breakdown-label {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.breakdown-amount {
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.header-button {
+  color: black;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+.custom-card {
+  padding: 16px;
+  border-radius: 8px;
+  background: #2B2B2B;
+  margin: 16px;
+}
+.balance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  

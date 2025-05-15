@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+<body>
+  <ion-app>
+    <ion-content>
+        <!-- Header -->
+        <div class="header">
+          <ion-icon name="arrow-back-outline" class="back-icon" (click)="goToHome()"></ion-icon>
+            <div>
+                <h2>QR</h2>
+                <p></p>
+            </div>
+            <ion-icon name="notifications" size="large" class="notif-icon"></ion-icon>
+        </div>
+
+        <ion-content class="ion-padding">
+          <div class="qr-container">
+            <qrcode [qrdata]="qrData" [width]="300" [errorCorrectionLevel]="'M'"></qrcode>
+          </div>
+        </ion-content>
+
+    </ion-content>
+</ion-app>
+  
+</body>

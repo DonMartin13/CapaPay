@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.logo-container {
+    margin-bottom: 1px;
+}
+
+.logo-img {
+    width: 150px; /* Make it bigger */
+    height: auto;
+    display: block;
+}
+
+.login-container {
+    background: #2B2318;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+.login-container p {
+    margin-bottom: 15px;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+.forgot-password {
+    text-align: right;
+    font-size: 0.9em;
+}
+.continue-btn {
+    background: #F7BC00;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+.continue-btn:hover {
+    background: #0056b3;
+}
+.register-link {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: black;
+}

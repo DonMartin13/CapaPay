@@ -1,0 +1,50 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+<body>
+  <ion-app>
+    <ion-content>
+         <!-- Header -->
+          <app-status-bar></app-status-bar>
+         <div class="header">
+            <div>
+                <h2>Notification</h2>
+                <p></p>
+            </div>
+            <ion-icon name="notifications"></ion-icon>
+        </div>
+
+   <!-- Notifications List -->
+   <div class="notifications-container">
+    <div *ngFor="let msg of notifications" class="notification-wrapper">
+      <ion-radio slot="start"></ion-radio>
+      <div class="notification-item">
+        <div class="notification-message">
+          <p>{{ msg }}</p>
+        </div>
+      </div>
+    </div>
+    <ion-text *ngIf="notifications.length === 0" color="medium">
+        <p>No notifications yet.</p>
+      </ion-text>
+      
+  </div>
+  
+  
+    </ion-content>
+
+      <!-- Employee Navigation -->
+      <ng-container [ngSwitch]="user?.role">
+        <app-admin-navbar *ngSwitchCase="'admin'"></app-admin-navbar>
+        <app-employee-navbar *ngSwitchCase="'employee'"></app-employee-navbar>
+        <app-employee-navbar *ngSwitchCase="'kiosk'"></app-employee-navbar>
+        <!-- Add more navbars here -->
+      </ng-container>
+
+  
+</ion-app>
+  
+</body>

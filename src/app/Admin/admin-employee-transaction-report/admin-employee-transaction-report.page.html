@@ -1,0 +1,75 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+<body>
+  <ion-app>
+    <ion-content>
+        <!-- Header -->
+         <app-status-bar></app-status-bar>
+        <div class="header">
+          <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
+            <div>
+                <h2>Transaction Report</h2>
+                <p>Employee</p>
+            </div>
+            <ion-icon name="download-outline" size="medium"></ion-icon>
+        </div>
+
+
+        <ion-row class="search-row">
+            <!-- Search Bar (90%) -->
+            <ion-col size="9">
+              <ion-searchbar 
+               
+                (ionInput)="onSearchChange($event)"
+                placeholder="Search...">
+              </ion-searchbar>
+            </ion-col>
+          
+            <!-- Filter Button (10%) -->
+            <ion-col size="3" class="filter-button">
+              <ion-button expand="block" class="custom-filter-btn" id="filter-trigger">
+                <ion-icon name="filter-outline" slot="icon-only"></ion-icon>
+              </ion-button>
+            </ion-col>
+          
+            <ion-popover trigger="filter-trigger" trigger-action="click">
+              <ion-content>
+                <ion-list>
+                  <ion-item button onclick="onFilterSelect('Employee')">Employee</ion-item>
+                  <ion-item button onclick="onFilterSelect('Kiosk')">Kiosk</ion-item>
+                </ion-list>
+              </ion-content>
+            </ion-popover>
+          </ion-row>
+          
+             <!-- Table Section -->
+
+         
+             <ion-grid>
+              <ion-row class="table-header">
+                <ion-col><strong>First Name</strong></ion-col>
+                <ion-col><strong>Last Name</strong></ion-col>
+                <ion-col><strong>User ID</strong></ion-col>
+                <ion-col><strong>Balance</strong></ion-col>
+              </ion-row>
+            
+              <ion-row *ngFor="let user of usersWithBalance" (click)="goToDetailedTransaction(user.userId)">
+                <ion-col>{{ user.firstName }}</ion-col>
+                <ion-col>{{ user.lastName }}</ion-col>
+                <ion-col>{{ user.userNumber }}</ion-col>
+                <ion-col>{{ user.balance }}</ion-col>
+              </ion-row>
+            </ion-grid>
+            
+
+
+        
+    </ion-content>
+
+</ion-app>
+  
+</body>

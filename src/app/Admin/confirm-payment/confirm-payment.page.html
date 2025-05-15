@@ -1,0 +1,64 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+
+<body>
+    <ion-app>
+        <ion-content>
+
+              <!-- Header -->
+              <div class="header">
+                <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBackHome()"></ion-icon>
+                <div>
+                    <h2>Instant Send</h2>
+                    <p></p>
+                </div>
+                <ion-icon name=""></ion-icon>
+            </div>
+
+            <ion-card class="card-section-from" (click)="showTransferFrom = true">
+              <ion-item lines="none">
+                <ion-label>Transfer from</ion-label>
+                <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+              </ion-item>
+            </ion-card>
+          
+            <!-- Transfer To (Number Input Only) -->
+            <ion-card class="card-section">
+              <ion-item lines="none">
+                <ion-label position="floating">Transfer to (Account Number)</ion-label>
+                <ion-input type="number"></ion-input>
+              </ion-item>
+            </ion-card>
+          
+             <!-- Transfer Amount (Number Input Only) -->
+             <ion-card class="card-section">
+              <ion-item lines="none">
+                <ion-label position="floating">Transfer Amount</ion-label>
+                <ion-input type="number"></ion-input>
+              </ion-item>
+            </ion-card>
+            
+          
+            <!-- Notes -->
+            <ion-note color="medium" class="note">
+              Remember to check your available balance before sending
+            </ion-note>
+          
+            <!-- Optional Note -->
+            <ion-card class="card-section">
+              <ion-item>
+                <ion-textarea placeholder="Add note (optional)"></ion-textarea>
+              </ion-item>
+            </ion-card>
+          
+
+            <ion-button expand="full" class="buttons" (click)="goToConfirmationPayment()">Next</ion-button>
+            <p id="successMessage" class="success-message" hidden>Transfer completed successfully!</p>
+
+          </ion-content>    
+        </ion-app>
+    </body>

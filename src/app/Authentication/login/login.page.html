@@ -1,0 +1,21 @@
+
+<body>
+    
+     <!-- Logo Placeholder -->
+  <div class="logo-container">
+    <img src="../../../assets/logo/vertical.png" alt="Logo Placeholder" class="logo-img">
+  </div>
+
+  <div class="login-container">
+    <p>Please enter your login details</p>
+    <input type="email" placeholder="Email" required [(ngModel)]="email"/>
+    <input type="password" placeholder="Password" required [(ngModel)]="password"/>
+    <div class="forgot-password">
+        <a href="#">Forgot password?</a>
+    </div>
+    <button class="continue-btn" (click)="login()">Continue</button>
+</div>
+<div class="register-link">
+    New to Capapay? <a (click)="goToRegisterOption()" >Register here</a>
+</div>
+</body>

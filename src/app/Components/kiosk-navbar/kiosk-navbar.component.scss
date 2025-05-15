@@ -1,0 +1,29 @@
+/* Floating QR Button */
+.fab-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -25px;
+    z-index: 1;
+}
+
+.fab-button {
+    position: relative;
+}
+
+ion-fab-button {
+    --background: #F7BC00;
+    --background-hover: #e0a900; /* Optional: Hover effect */
+    --background-activated: #c99400; /* Optional: Click effect */
+    --border-radius: 50%;
+    --border-width: 3px;
+    --border-style: solid;
+    --border-color: white;
+}
+
+
+/* Bottom Navigation */
+ion-tab-bar {
+    position: relative;
+    z-index: 0;
+}
