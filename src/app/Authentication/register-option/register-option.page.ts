@@ -6,7 +6,7 @@ import { IonApp, IonIcon, IonTabButton, IonLabel, IonFooter, IonContent, IonTool
   selector: 'app-register-option',
   templateUrl: './register-option.page.html',
   styleUrls: ['./register-option.page.scss'],
-  imports: [] 
+  imports: [IonIcon] 
 })
 export class RegisterOptionPage implements OnInit {
 

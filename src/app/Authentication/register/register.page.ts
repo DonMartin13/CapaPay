@@ -4,15 +4,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import {
-  ToastController, LoadingController
-} from "@ionic/angular/standalone";
+  ToastController, LoadingController, IonContent, IonButton } from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonButton, IonContent, 
     HttpClientModule, FormsModule
 ]
 })

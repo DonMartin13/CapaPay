@@ -17,14 +17,17 @@ body {
     margin: 0;
 }
 
+
 .logo-container {
     margin-bottom: 1px;
+    margin-top: -100px;
 }
 
 .logo-img {
     width: 150px; /* Make it bigger */
     height: auto;
     display: block;
+    margin-bottom: 15px;
 }
 
 .login-container {
@@ -32,11 +35,11 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 330px;
     text-align: center;
 }
 .login-container p {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 input {
     width: 100%;
@@ -49,10 +52,16 @@ input {
 }
 .forgot-password {
     text-align: right;
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin-bottom: 10px;
-
+    margin-top: 12px;   
 }
+
+.forgot-password a {
+    color: white;
+    text-decoration: none; /* optional: remove underline */
+  }
+
 .continue-btn {
     background: #F7BC00;
     color: rgb(0, 0, 0);
@@ -66,7 +75,7 @@ input {
     background: #0056b3;
 }
 .register-link {
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: 0.9em;
     color: black;
 }

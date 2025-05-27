@@ -13,91 +13,35 @@
     </div>
   
     <div class="section-container">
-      <h2>Please enter your company details.</h2>
+      <h2>Enter Company Details</h2>
   
       <!-- Company Name Input Field -->
       <ion-item class="inputCompany">
         <ion-input
           type="text"
-          placeholder="Company Name"
+          placeholder="Enter Company Name"
           [(ngModel)]="companyName"
           name="companyName"
           required>
         </ion-input>
       </ion-item>
   
-      <!-- Nature of Business Buttons -->
-      <h3>Nature of Business</h3>
-  
-      <div class="business-buttons">
-        <ion-button
-          expand="full"
-          fill="outline"
-          class="business-btn"
-          [color]="natureOfBusiness === 'Agriculture' ? 'primary' : 'medium'"
-          (click)="natureOfBusiness = 'Agriculture'">
-          Agriculture
-        </ion-button>
-  
-        <ion-button
-          expand="full"
-          fill="outline"
-          class="business-btn"
-          [color]="natureOfBusiness === 'Construction' ? 'primary' : 'medium'"
-          (click)="natureOfBusiness = 'Construction'">
-          Construction
-        </ion-button>
-  
-        <ion-button
-          expand="full"
-          fill="outline"
-          class="business-btn"
-          [color]="natureOfBusiness === 'Education' ? 'primary' : 'medium'"
-          (click)="natureOfBusiness = 'Education'">
-          Education
-        </ion-button>
-  
-        <ion-button
-          expand="full"
-          fill="outline"
-          class="business-btn"
-          [color]="natureOfBusiness === 'Pharmaceutical' ? 'primary' : 'medium'"
-          (click)="natureOfBusiness = 'Pharmaceutical'">
-          Pharmaceutical
-        </ion-button>
-  
-        <ion-button
-          expand="full"
-          fill="outline"
-          class="business-btn"
-          [color]="natureOfBusiness === 'Trading' ? 'primary' : 'medium'"
-          (click)="natureOfBusiness = 'Trading'">
-          Trading
-        </ion-button>
-  
-        <ion-button
-          expand="full"
-          fill="outline"
-          class="business-btn"
-          [color]="natureOfBusiness === 'Transportation & Logistics' ? 'primary' : 'medium'"
-          (click)="natureOfBusiness = 'Transportation & Logistics'">
-          Transportation & Logistics
-        </ion-button>
-  
-        <ion-button
-          expand="full"
-          fill="outline"
-          class="business-btn"
-          [color]="natureOfBusiness === 'Wholesale/Retail' ? 'primary' : 'medium'"
-          (click)="natureOfBusiness = 'Wholesale/Retail'">
-          Wholesale/Retail
-        </ion-button>
-      </div>
+      <!-- Nature of Business Buttons -->  
+      <ion-item class="inputCompany">
+        <ion-select [(ngModel)]="natureOfBusiness" placeholder="Select Nature of Business" interface="action-sheet">
+          <ion-select-option value="Agriculture">Agriculture</ion-select-option>
+          <ion-select-option value="Construction">Construction</ion-select-option>
+          <ion-select-option value="Education">Education</ion-select-option>
+          <ion-select-option value="Pharmaceutical">Pharmaceutical</ion-select-option>
+          <ion-select-option value="Trading">Trading</ion-select-option>
+          <ion-select-option value="Transportation & Logistics">Transportation & Logistics</ion-select-option>
+          <ion-select-option value="Wholesale/Retail">Wholesale/Retail</ion-select-option>
+        </ion-select>
+      </ion-item>
   
       <!-- Register Company Button -->
       <ion-button
         expand="full"
-        color="primary"
         class="register-btn"
         (click)="registerCompany()">
         Register Company

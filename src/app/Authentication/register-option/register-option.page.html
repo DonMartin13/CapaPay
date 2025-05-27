@@ -1,8 +1,9 @@
 <body>
   <div class="container">
     <h3 style="color: black; text-align: center;">Registration Options</h3>
+  
     <div class="register-button" (click)="goToRegister('admin')">
-        <div class="icon-placeholder">🔑</div>
+        <div class="icon-placeholder"><ion-icon name="person"></ion-icon></div>
         <div class="text-content">
           <h3>Register as Administrator</h3>
           <p>Manage and export summaries by employee, category, or kiosk location.</p>
@@ -10,7 +11,7 @@
       </div>
       
       <div class="register-button" (click)="goToRegister('employee')">
-        <div class="icon-placeholder">👤</div>
+        <div class="icon-placeholder"><ion-icon name="people"></ion-icon></div>
         <div class="text-content">
           <h3>Register as Employee</h3>
           <p>Employee Wallet with secure QR codes, balance updates, and transaction filters.</p>
@@ -18,7 +19,7 @@
       </div>
       
       <div class="register-button" (click)="goToRegister('kiosk')">
-        <div class="icon-placeholder">🏪</div>
+        <div class="icon-placeholder"><ion-icon name="storefront"></ion-icon></div>
         <div class="text-content">
           <h3>Register as Kiosk</h3>
           <p>Set prices, scan QR codes, and streamline transactions with ease.</p>

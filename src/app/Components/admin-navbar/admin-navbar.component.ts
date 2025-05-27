@@ -7,8 +7,7 @@ import { IonApp, IonIcon, IonTabButton, IonLabel, IonFooter, IonContent, IonTool
   selector: 'app-admin-navbar',
   templateUrl: './admin-navbar.component.html',
   styleUrls: ['./admin-navbar.component.scss'],
-  imports: [IonFabButton, IonFab, IonIcon, IonTabButton, IonTabBar] // ✅ Import required Ionic components
- // ✅ Import required Ionic components
+  imports: [IonFabButton, IonFab, IonIcon, IonTabButton, IonTabBar]
 
 })
 export class AdminNavbarComponent  implements OnInit {
@@ -38,7 +37,7 @@ export class AdminNavbarComponent  implements OnInit {
   goToPaymentMethod() {
     this.router.navigate(['/admin-wallet-method']);
   }
-  
+
 
 
   

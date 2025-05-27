@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-company-details',
   templateUrl: './company-details.page.html',
   styleUrls: ['./company-details.page.scss'],
-  imports: [FormsModule, IonInput, IonItem, IonButton]
+  imports: [FormsModule, IonInput, IonItem, IonButton,IonLabel,IonSelectOption]
 
 })
 export class CompanyDetailsPage implements OnInit {
@@ -32,6 +32,11 @@ export class CompanyDetailsPage implements OnInit {
   }
 
   ngOnInit() {}
+
+  onBusinessChange(event: any) {
+    this.natureOfBusiness = event.detail.value;
+    console.log('Selected business:', this.natureOfBusiness);
+  }
 
   async registerCompany() {
     if (!this.companyName || !this.natureOfBusiness || !this.newUser) {

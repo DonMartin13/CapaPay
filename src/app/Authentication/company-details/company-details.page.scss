@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -18,6 +17,7 @@ body {
 }
 .logo-container {
     margin-bottom: 1px;
+    margin-top: -200px;
 }
 
 .logo-img {
@@ -57,12 +57,15 @@ ion-label {
 }
 
 ion-input {
-  
     --background: white;
     --color: black;
     z-index: -1;
 }
 
+ion-button {
+    --background: #F7BC00;
+    --color: #2B2318;
+  }
 
 
 /* Section Containers */
@@ -75,48 +78,22 @@ ion-input {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #2B2318;
     transition: box-shadow 0.3s ease-in-out;
+    margin-top: 10px;
 }
 
 .section-container:hover {
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Buttons */
-button {
-    --background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-    max-width: 200px;
-    margin: 10px 0;
-    display: block;
-    text-align: center;
-}
 
-button:hover {
-    background-color: #d3d5d6;
-}
+.inputCompany ion-label {
+    flex: 0 0 160px; /* Adjust this value as needed */
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-button:focus {
-    outline: none;
-}
-
-/* Nature of Business Button Styles */
-.business-btn {
-    margin-bottom: 15px;
-    text-align: center;
-    color: white;
-    --border-color: white;
-}
-
-.business-btn:hover {
-    background-color: #F7BC00;
-    color: black;
-}
 
 /* Register Button Styles */
 .register-btn {
@@ -125,3 +102,8 @@ button:focus {
     --background: #F7BC00 !important;
     --color: black;
 }
+
+ion-item.inputCompany ion-select {
+    --background: white;
+    --color: black;
+  }
